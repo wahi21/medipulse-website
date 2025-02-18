@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>অ্যাজিথ ৫০০</title>
+<style>
+    .container {
+        display: flex;
+        align-items: flex-start;
+        padding: 40px;
+    }
+    .image-container {
+        margin-right: 10px;
+    }
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+    .napa, .paracetamol {
+        font-family: 'Verdana', sans-serif;
+        margin: 0;
+    }
+    .napa {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .paracetamol {
+        font-size: 18px;
+    }
+    .quantity-section {
+        margin-top: 15px;
+    }
+    .quantity-label {
+        font-family: 'Verdana', sans-serif;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .quantity-control {
+        display: flex;
+        align-items: center;
+    }
+    .quantity-button {
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .quantity-input {
+        width: 40px;
+        text-align: center;
+        margin: 0 10px;
+    }
+    .description-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }
+    .description-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    img {
+        width: 450px;
+        height: auto;
+        margin-bottom: 0;
+    }
+    .add-to-cart-btn {
+        background-color: #FFA07A;  /* Light orange background */
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;  /* Make the button span the width */
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    .add-to-cart-btn:hover {
+        background-color: #FF7F50;  /* Darker shade on hover */
+    }
+    .prescription-btn {
+        background-color: #FF6F00;  /* Orange color */
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    .price-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .best-price {
+        font-size: 24px;
+        font-weight: bold;
+        color: red;
+    }
+    .currency {
+        font-size: 20px;
+    }
+    .science-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }
+    .science-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    .dose-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }   
+    .dose-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }  
+    .effects-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    } 
+    .effects-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    .caution-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    } 
+    .caution-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    } 
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="image-container">
+        <img src="C:/Users/USER/Downloads/azyth.jpg" alt="Seclo 20">
+    </div>
+    <div class="text-container">
+        <p class="napa">অ্যাজিথ ৫০০</p>
+        <p class="paracetamol">অ্যাজিথরোমাইসিন ৫০০ মিগ্রা</p>
+        
+        <!-- Quantity Selection Section -->
+        <div class="quantity-section">
+            <div>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="1" checked> ১ পিস
+                </label>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="10"> ১ পাতা=৩ পিস
+                </label>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="10"> ১ বক্স=৩ পাতা
+                </label>
+            </div>
+
+            <div class="quantity-control">
+                <button class="quantity-button" onclick="decreaseQuantity()">-</button>
+                <input type="number" class="quantity-input" id="quantity" value="0" min="0" readonly>
+                <button class="quantity-button" onclick="increaseQuantity()">+</button>
+            </div>
+        </div>
+        
+        <!-- Price Section Above Add to Cart -->
+        <div class="price-section">
+            <span class="currency">৳</span>
+            <span class="best-price">৫৩.২৮</span>
+            <span>প্রতি পিস</span>
+        </div>
+        
+        <!-- Add to Cart Button -->
+        <button class="add-to-cart-btn">কার্টে যোগ করুন</button>
+        <button class="prescription-btn">প্রেসক্রিপশন প্রয়োজন</button>
+    </div>
+</div>
+
+<div class="description-container">
+    <div class="description-banner">বর্ণনা</div>
+    <div class="description-text">অ্যাজিথ ৫০০ নীচের শ্বাসনালী সংক্রমণ, যেমন ব্রঙ্কাইটিস এবং নিউমোনিয়া, উপরের শ্বাসনালী সংক্রমণ, যেমন সাইনোসাইটিস এবং ফ্যারিঞ্জাইটিস/টনসিলাইটিস, ওটাইটিস মিডিয়া এবং ত্বক ও নরম টিস্যুর রোগগুলির জন্য প্রদর্শিত হয়। পুরুষ ও মহিলাদের যৌন সংক্রমণজনিত রোগে, অ্যাজিথ্রোমাইসিন চলামিডিয়া ট্র্যাচোমেটিস দ্বারা সৃষ্ট নন-গোনোকোকাল ইউরেথ্রাইটিস এবং সার্ভিসাইটিসের চিকিৎসায় ব্যবহৃত হয়।
+</div>
+
+    <div class="science-banner">ঔষধবিজ্ঞান</div>
+    <div class="science-text">অ্যাজিথ্রোমাইসিন অ্যাসিড-স্থির এবং গ্যাস্ট্রিক অ্যাসিড থেকে সুরক্ষার প্রয়োজন ছাড়াই মৌখিকভাবে গ্রহণ করা যেতে পারে। এটি দ্রুত শোষিত হয়; এর শোষণ খালি পেটে বেশি হয়। প্রাপ্তবয়স্কদের জন্য মৌখিক ডোজ ফর্মে শীর্ষ ঘনত্বে পৌঁছানোর সময় ২.১ থেকে ৩.২ ঘণ্টা। ফ্যাগোসাইটগুলিতে উচ্চ ঘনত্বের কারণে, অ্যাজিথ্রোমাইসিন সহজেই সংক্রমণের স্থান পর্যন্ত পৌঁছে যায়। সক্রিয় ফ্যাগোসাইটোসিসের সময়, অ্যাজিথ্রোমাইসিনের বৃহৎ ঘনত্ব নিঃসৃত হয়। টিস্যুতে অ্যাজিথ্রোমাইসিনের ঘনত্ব প্লাজমার চেয়ে ৫০ গুণ বেশি হতে পারে। এটি আয়নিত আঠালো এবং উচ্চ লিপিড দ্রাব্যতার কারণে।
+
+মাইক্রোবায়োলজি: অ্যাজিথ্রোমাইসিন সংবেদনশীল জীবাণুগুলির ৫০এস রাইবোসোমাল উপএককের সাথে বাইন্ডিং করে এবং এইভাবে মাইক্রোবিয়াল প্রোটিন সংশ্লেষণে বিঘ্ন ঘটায়। নিউক্লিক অ্যাসিড সংশ্লেষণের উপর কোনো প্রভাব পড়ে না। অ্যাজিথ্রোমাইসিনকে প্রায় সব জীবাণুর বিরুদ্ধে সক্রিয় দেখানো হয়েছে, যা নিচের জীবাণুগুলির ইনভিট্রো এবং ক্লিনিকাল সংক্রমণে প্রযোজ্য:
+
+অ্যারোবিক এবং ফ্যাকালটেটিভ গ্রাম-পজিটিভ জীবাণু: স্ট্যাফিলোকক্কাস অরিয়াস, স্ট্রেপ্টোকক্কাস আগালাকটিয়াই, স্ট্রেপ্টোকক্কাস নিউমোনিয়া, স্ট্রেপ্টোকক্কাস পায়োজেনিস
+অ্যারোবিক এবং ফ্যাকালটেটিভ গ্রাম-নেগেটিভ জীবাণু: হেমোফিলাস ডুক্রে, হেমোফিলাস ইনফ্লুয়েঞ্জা, মোরাক্সেলা ক্যাটারহালিস, নাইসেরিয়া গনোরিয়া
+অন্যান্য জীবাণু: ক্ল্যামিডিয়া নিউমোনিয়া, ক্ল্যামিডিয়া ট্র্যাচোমাটিস, মাইকোপ্লাজমা নিউমোনিয়া, বিটা-ল্যাকটামেজ উৎপাদন অ্যাজিথ্রোমাইসিনের কার্যকলাপে কোনো প্রভাব ফেলবে না।
+অ্যারোবিক এবং ফ্যাকালটেটিভ গ্রাম-পজিটিভ জীবাণু: স্ট্রেপ্টোকোক্কি (গ্রুপ সি, এফ, জি), ভিরিডানস গ্রুপ স্ট্রেপ্টোকোক্কি
+অ্যারোবিক এবং ফ্যাকালটেটিভ গ্রাম-নেগেটিভ জীবাণু: বোর্ডেটেলা পারটুসিস, লিজিওনেলা নিউমোনোফিলা
+অ্যানায়ারোবিক জীবাণু: পেপ্টোস্ট্রেপ্টোকোক্কাস প্রজাতি, প্রেভোটেলা বিভিয়া</div>
+    <div class="dose-banner">ডোজ ও গ্রহণ</div>
+    <div class="dose-text">মৌখিক-
+
+প্রাপ্তবয়স্ক:
+
+৩ দিনের জন্য ৫০০ মিগ্রা একবার দৈনিক অথবা ১ম দিনে ৫০০ মিগ্রা একবার, তারপর ২-৫ দিনের জন্য ২৫০ মিগ্রা একবার দৈনিক ৪ দিন। চলামিডিয়া ট্র্যাচোমাটিস দ্বারা সৃষ্ট যৌন সংক্রমণের জন্য প্রাপ্তবয়স্কদের মধ্যে, ডোজ হল ১ গ্রাম একক ডোজ হিসেবে অথবা ১ম দিনে ৫০০ মিগ্রা একবার, তারপর পরবর্তী ২ দিন ২৫০ মিগ্রা একবার দৈনিক।
+
+শিশু:
+
+৬ মাসের বেশি বয়সী শিশুদের জন্য ৩ দিনের জন্য ১০ মিগ্রা/কেজি শরীরের ওজন একবার দৈনিক। শরীরের ওজন ১৫-২৫ কেজি হলে ৩ দিনের জন্য ২০০ মিগ্রা (১ চা চামচ)। শরীরের ওজন ২৬-৩৫ কেজি হলে ৩ দিনের জন্য ৩০০ মিগ্রা (১½ চা চামচ); শরীরের ওজন ৩৬-৪৫ কেজি হলে ৩ দিনের জন্য ৪০০ মিগ্রা (২ চা চামচ)। টাইফয়েড জ্বরে ৭-১০ দিনের জন্য ৫০০ মিগ্রা (২½ চা চামচ) একবার দৈনিক।
+
+অ্যাজিথ্রোমাইসিন ইনজেকশন (কেবল আইভি ইনফিউশন জন্য):
+এডাল্ট রোগীদের জন্য কমিউনিটি-আধারিত নিউমোনিয়া চিকিৎসার জন্য অ্যাজিথ্রোমাইসিনের সুপারিশকৃত ডোজ হল:
+
+অন্তঃশিরা পথে ৫০০ মিগ্রা একক দৈনিক ডোজ কমপক্ষে দুই দিন। ইনট্রাভেনাস থেরাপির পর মৌখিকভাবে অ্যাজিথ্রোমাইসিন ৫০০ মিগ্রা একবার দৈনিক দেওয়া উচিত, যা দুইটি ২৫০ মিগ্রা ট্যাবলেট হিসেবে দেওয়া হবে, ৭ থেকে ১০ দিনের থেরাপি পূর্ণ করার জন্য। মৌখিক থেরাপিতে পরিবর্তনের সময়টি চিকিৎসকের সিদ্ধান্তের উপর নির্ভর করবে এবং ক্লিনিকাল প্রতিক্রিয়ার ভিত্তিতে।
+
+এডাল্ট রোগীদের জন্য পেলভিক ইনফ্ল্যামেটরি ডিজিজ (PID) চিকিৎসার জন্য সুপারিশকৃত ডোজ হল ৫০০ মিগ্রা একক দৈনিক ডোজ অন্তঃশিরা পথে এক বা দুই দিন। ইনট্রাভেনাস থেরাপির পর মৌখিকভাবে অ্যাজিথ্রোমাইসিন ২৫০ মিগ্রা একবার দৈনিক ৭ দিনের থেরাপি পূর্ণ করার জন্য দেওয়া উচিত। মৌখিক থেরাপিতে পরিবর্তনের সময়টি চিকিৎসকের সিদ্ধান্তের উপর নির্ভর করবে এবং ক্লিনিকাল প্রতিক্রিয়ার ভিত্তিতে। যদি অ্যানায়ারোবিক মাইক্রোবিয়াল দ্বারা সংক্রমণ ঘটানোর সন্দেহ হয়, তাহলে অ্যাজিথ্রোমাইসিনের সাথে অ্যানায়ারোবিক কার্যকলাপযুক্ত একটি অ্যান্টিমাইক্রোবিয়াল এজেন্ট দেওয়া উচিত।
+
+শিশুদের বা ১৬ বছরের কম বয়সী কিশোরদের জন্য অ্যাজিথ্রোমাইসিন ইনজেকশনের নিরাপত্তা এবং কার্যকারিতা প্রমাণিত হয়নি।</div>
+   <div class="effects-banner">পার্শ্বপ্রতিক্রিয়া</div>
+    <div class="effects-text">অ্যাজিথ ৫০০ ভালোভাবে সহ্যকৃত একটি অ্যান্টিবায়োটিক, যার পার্শ্বপ্রতিক্রিয়া কম। বমি বমি ভাব, বমি, পেটের অস্বস্তি (ব্যথা/ক্র্যাম্প), গ্যাস, ডায়রিয়া, মাথাব্যথা, মাথা ঘোরা, এবং ত্বকে র‍্যাশ সহ কিছু পার্শ্বপ্রতিক্রিয়া রয়েছে, যা ওষুধটি বন্ধ করলে বিপরীত হয়।</div>
+    <div class="caution-banner">সতর্কতা</div>
+    <div class="caution-text">যেকোনো অ্যান্টিবায়োটিকের সাথে বিশেষ করে ছত্রাক সংক্রমণের জন্য অ-সুস্পষ্ট জীবাণুর সূপারইনফেকশন লক্ষণের পর্যবেক্ষণ সুপারিশ করা হয়। কিডনি সমস্যাযুক্ত রোগীদের জন্য ডোজ পরিবর্তন করার প্রয়োজন নেই। অ্যাজিথ্রোমাইসিনের গর্ভাবস্থা ক্যাটেগরি B। পশু প্রজনন গবেষণায় দেখা গেছে যে অ্যাজিথ্রোমাইসিনের গর্ভস্থ শিশুর উপর কোনো ক্ষতিকর প্রভাব নেই। গর্ভবতী মহিলাদের জন্য যথাযথ এবং ভাল নিয়ন্ত্রিত গবেষণা নেই। যেহেতু প্রাণী গবেষণা মানব প্রতিক্রিয়া ভবিষ্যদ্বাণী করতে পারে না, অ্যাজিথ্রোমাইসিন গর্ভাবস্থায় শুধুমাত্র তখনই ব্যবহার করা উচিত যখন উপযুক্ত বিকল্প পাওয়া না যায়। এটা জানা যায়নি যে অ্যাজিথ্রোমাইসিন স্তন্যদানে নির্গত হয় কিনা। সুতরাং, স্তন্যদানকারী মহিলাদের ক্ষেত্রে অ্যাজিথ্রোমাইসিন ব্যবহারের সময় সতর্কতা অবলম্বন করা উচিত।</div>
+<script>
+    function increaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+    }
+
+    function decreaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        if (quantityInput.value > 0) {
+            quantityInput.value = parseInt(quantityInput.value) - 1;
+        }
+    }
+</script>
+</body>
+</html>

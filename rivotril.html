@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>রিভোট্রিল ০.৫</title>
+<style>
+    .container {
+        display: flex;
+        align-items: flex-start;
+        padding: 40px;
+    }
+    .image-container {
+        margin-right: 10px;
+    }
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+    .napa, .paracetamol {
+        font-family: 'Verdana', sans-serif;
+        margin: 0;
+    }
+    .napa {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .paracetamol {
+        font-size: 18px;
+    }
+    .quantity-section {
+        margin-top: 15px;
+    }
+    .quantity-label {
+        font-family: 'Verdana', sans-serif;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .quantity-control {
+        display: flex;
+        align-items: center;
+    }
+    .quantity-button {
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .quantity-input {
+        width: 40px;
+        text-align: center;
+        margin: 0 10px;
+    }
+    .description-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }
+    .description-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    img {
+        width: 450px;
+        height: auto;
+        margin-bottom: 0;
+    }
+    .add-to-cart-btn {
+        background-color: #FFA07A;  /* Light orange background */
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;  /* Make the button span the width */
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    .add-to-cart-btn:hover {
+        background-color: #FF7F50;  /* Darker shade on hover */
+    }
+    .prescription-btn {
+        background-color: #FF6F00;  /* Orange color */
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    .price-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .best-price {
+        font-size: 24px;
+        font-weight: bold;
+        color: red;
+    }
+    .currency {
+        font-size: 20px;
+    }
+    .science-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }
+    .science-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    .dose-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }   
+    .dose-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }  
+    .effects-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    } 
+    .effects-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    .caution-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    } 
+    .caution-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    } 
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="image-container">
+        <img src="C:/Users/USER/Downloads/rivotril.jpg" alt="Rivotril 0.5">
+    </div>
+    <div class="text-container">
+        <p class="napa">রিভোট্রিল ০.৫</p>
+        <p class="paracetamol">ক্লোনাজেপাম ০.৫ মিগ্রা</p>
+        
+        <!-- Quantity Selection Section -->
+        <div class="quantity-section">
+            <div>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="1" checked> ১ পিস
+                </label>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="10"> ১ পাতা=১০ পিস
+                </label>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="10"> ১ বক্স=৮ পাতা
+                </label>
+            </div>
+
+            <div class="quantity-control">
+                <button class="quantity-button" onclick="decreaseQuantity()">-</button>
+                <input type="number" class="quantity-input" id="quantity" value="0" min="0" readonly>
+                <button class="quantity-button" onclick="increaseQuantity()">+</button>
+            </div>
+        </div>
+        
+        <!-- Price Section Above Add to Cart -->
+        <div class="price-section">
+            <span class="currency">৳</span>
+            <span class="best-price">৮.৬৪</span>
+            <span>প্রতি পিস</span>
+        </div>
+        
+        <!-- Add to Cart Button -->
+        <button class="add-to-cart-btn">কার্টে যোগ করুন</button>
+        <button class="prescription-btn">প্রেসক্রিপশন প্রয়োজন</button>
+    </div>
+</div>
+
+<div class="description-container">
+    <div class="description-banner">বর্ণনা</div>
+    <div class="description-text">এটি প্যানিক ডিসঅর্ডার চিকিৎসার জন্য ব্যবহৃত হয়, যা আঘোরাফোবিয়া সহ বা ছাড়া হতে পারে। প্যানিক ডিসঅর্ডার এমন একটি অবস্থা যা আকস্মিক প্যানিক আক্রমণের ঘটনার সাথে সম্পর্কিত, পাশাপাশি আরও আক্রমণের হওয়ার ভয় এবং আক্রমণের ফলাফল বা পরিণতির বিষয়ে উদ্বেগ। এটি লেনক্স-গ্যাস্টট সিনড্রোম (পেটিট ম্যাল ফর্ম), অ্যাকাইনেটিক সিজার, এবং মায়োক্লোনিক সিজার চিকিৎসার জন্যও ব্যবহৃত হয়, এককভাবে বা একত্রে। যারা সাকসিনিমাইডের প্রতি প্রতিক্রিয়া জানায় না, তাদের জন্য পেটিট ম্যাল সিজারে আক্রান্ত রোগীরা এতে উপকার পেতে পারেন। ক্লোনাজেপামের দীর্ঘমেয়াদি ব্যবহারে কার্যকারিতা, যা ৯ সপ্তাহের বেশি সময় ধরে ব্যবহৃত হয়, এটি নিয়ন্ত্রিত ক্লিনিক্যাল গবেষণায় যথেষ্টভাবে তদন্ত করা হয়নি। যদি কোনো চিকিৎসক ক্লোনাজেপাম দীর্ঘ সময় ধরে ব্যবহারের সিদ্ধান্ত নেন, তবে তাকে নিয়মিতভাবে রোগীর জন্য ওষুধের দীর্ঘমেয়াদি কার্যকারিতা পুনঃমূল্যায়ন করা উচিত।
+</div>
+
+    <div class="science-banner">ঔষধবিজ্ঞান</div>
+    <div class="science-text">ক্লোনাজেপাম বেনজোডায়াজেপিনের সাধারণ ফার্মাকোলজিক্যাল বৈশিষ্ট্যগুলি ধারণ করে এবং এর মধ্যে অ্যান্টিকনভালসান্ট, সেডেটিভ, মাসল রিল্যাক্স্যান্ট এবং অ্যানজিওলিটিক প্রভাব রয়েছে। বেনজোডায়াজেপিনের কেন্দ্রীয় ক্রিয়া ইনহিবিটরি সিন্যাপসগুলিতে GABA-রজিত নিউরোট্রান্সমিশনের বৃদ্ধি দ্বারা মাধ্যমিক হয়। বেনজোডায়াজেপিনের উপস্থিতিতে, GABA রিসেপ্টরের নিউরোট্রান্সমিটার প্রতি আগ্রহ ইতিবাচক অ্যালোস্টেরিক মডুলেশনের মাধ্যমে বৃদ্ধি পায়, যার ফলে মুক্ত হওয়া GABA-এর পোস্টসিন্যাপটিক ট্রান্সমেমব্রেন ক্লোরাইড আয়ন ফ্লাক্সে এর প্রভাব বৃদ্ধি পায়।
+
+এছাড়াও, প্রাণী পরীক্ষার তথ্য রয়েছে যা ক্লোনাজেপামের সেরোটোনিনে প্রভাব দেখায়। প্রাণী গবেষণা এবং মানব EEG অনুসন্ধানগুলি দেখিয়েছে যে ক্লোনাজেপাম দ্রুত অনেক ধরণের পারক্সিসমাল কার্যকলাপ দমন করে, যার মধ্যে পেটিট ম্যাল (অ্যাবসেন্স সিজার)-এ স্পাইক এবং সার্জ, স্লো স্পাইক, স্পাইকস জেনারেলাইজড ওয়েভস, টাইম স্পাইক বা অন্যান্য স্থানে এবং ওয়েভ স্পাইকস এবং অস্বাভাবিকতা রয়েছে। সাধারণ EEG অস্বাভাবিকতাগুলি সাধারণত ফোকাল অস্বাভাবিকতাগুলির চেয়ে বেশি দমন করা হয়। এই ফলাফল অনুযায়ী, ক্লোনাজেপাম সাধারণ এবং ফোকাল এপিলেপসির জন্য উপকারী।</div>
+    <div class="dose-banner">ডোজ ও গ্রহণ</div>
+    <div class="dose-text">মৌখিকভাবে গ্রহণের নির্দেশনা:
+প্রাপ্তবয়স্করা:
+সিজার ডিসঅর্ডারের ক্ষেত্রে প্রাপ্তবয়স্কদের জন্য প্রাথমিক ডোজ দিনে ১.৫ মিগ্রা অতিক্রম করা উচিত নয়, যা তিনটি ভাগে বিভক্ত করে দেওয়া হবে। প্রতি ৩ দিনে ০.৫ থেকে ১ মিগ্রা পর্যন্ত বৃদ্ধি করা যেতে পারে, যতক্ষণ না সিজার যথাযথভাবে নিয়ন্ত্রিত হয় বা পার্শ্বপ্রতিক্রিয়ার কারণে আরও বৃদ্ধি করা সম্ভব না হয়। রক্ষণাবেক্ষণ ডোজ প্রতিটি রোগীর জন্য পৃথকভাবে নির্ধারণ করতে হবে, রোগীর প্রতিক্রিয়ার উপর নির্ভর করে। সর্বোচ্চ প্রস্তাবিত দৈনিক ডোজ ২০ মিগ্রা।
+
+প্যানিক ডিসঅর্ডারের ক্ষেত্রে প্রাপ্তবয়স্কদের জন্য প্রাথমিক ডোজ ০.২৫ মিগ্রা, যা দিনে দুইবার বিভক্ত করে দেওয়া হবে। ৩ দিন পর, বেশিরভাগ রোগীর জন্য লক্ষ্যমাত্রার ডোজ হিসাবে ১ মিগ্রা/দিন পর্যন্ত বৃদ্ধি করা যেতে পারে।
+
+শিশু রোগীরা:
+ঘুমাভাব কমানোর জন্য, শিশু ও নবজাতকদের (১০ বছর বয়স পর্যন্ত বা ৩০ কেজি পর্যন্ত শরীরের ওজন) প্রাথমিক ডোজ দিনে ০.০১ থেকে ০.০৩ মিগ্রা/কেজি হওয়া উচিত, তবে এটি দিনে ০.০৫ মিগ্রা/কেজি অতিক্রম করা উচিত নয়। এই ডোজ দিনে দুই বা তিনটি ভাগে বিভক্ত করে দিতে হবে।
+
+ইনজেকশনের নির্দেশনা:
+শিশু ও নবজাতক:
+অর্ধেক ভায়াল (০.৫ মিগ্রা) ধীরে ধীরে IV ইনজেকশন বা IV ইনফিউশন দ্বারা দেওয়া হবে।
+
+প্রাপ্তবয়স্করা:
+১ ভায়াল (১ মিগ্রা) ধীরে ধীরে IV ইনজেকশন বা IV ইনফিউশন দ্বারা দেওয়া হবে। প্রয়োজনে এই ডোজ পুনরায় দেওয়া যেতে পারে (সাধারণত ১-৪ মিগ্রা পর্যাপ্ত হয়)।
+প্রাপ্তবয়স্কদের ক্ষেত্রে ইনজেকশনের গতি প্রতি মিনিটে ০.২৫ - ০.৫ মিগ্রা (প্রস্তুত দ্রবণের ০.৫-১.০ মি.লি.) অতিক্রম করা উচিত নয় এবং মোট ডোজ ১০ মিগ্রার বেশি হওয়া উচিত নয়।</div>
+   <div class="effects-banner">পার্শ্বপ্রতিক্রিয়া</div>
+    <div class="effects-text">ক্লোনাজেপামের সবচেয়ে সাধারণ পার্শ্বপ্রতিক্রিয়া হল সেন্ট্রাল নার্ভাস সিস্টেম (CNS)-এর দমন। সিজারের চিকিৎসা করা প্রায় অর্ধেক রোগীর মধ্যে তন্দ্রাচ্ছন্নতা লক্ষ্য করা হয়েছে, এবং তাদের মধ্যে প্রায় এক তৃতীয়াংশের মধ্যে এটাক্সিয়া দেখা গেছে। কিছু ক্ষেত্রে, সময়ের সাথে এটি উন্নত হতে পারে; আচরণগত সমস্যা প্রায় ২৫% রোগীর মধ্যে লক্ষ্য করা হয়েছে। অ্যাফোনিয়া, কোমা, ট্রেমর, ভারটিগো, বিভ্রান্তি, বিষণ্ণতা, স্মৃতিলোপ, হলুসিনেশন, হিস্টিরিয়া, libido বৃদ্ধি, অনিদ্রা, সাইকোসিস এবং Palpitations কিছু লক্ষণ যা উদ্ভূত হতে পারে।</div>
+    <div class="caution-banner">সতর্কতা</div>
+    <div class="caution-text">রিভোট্রিল ০.৫ মিগ্রা একাধিক বিভিন্ন ধরনের সিজার ডিসঅর্ডারের রোগীদের মধ্যে সাধারণ টনিক-ক্লোনিক সিজারের ঘটনা বাড়াতে বা শুরু করতে পারে। এর ফলে অ্যান্টিকনভালসেন্টের ডোজ বাড়ানো বা নতুন করে যোগ করার প্রয়োজন হতে পারে। ভ্যালপ্রোইক অ্যাসিড এবং রিভোট্রিল ০.৫ মিগ্রা একসঙ্গে ব্যবহারের ফলে অ্যাবসেন্ট স্ট্যাটাস হতে পারে। গর্ভাবস্থায় রিভোট্রিল ০.৫ মিগ্রা ব্যবহার করা উচিত শুধুমাত্র যদি সম্ভব সুবিধাগুলি শিশুর ক্ষতির তুলনায় বেশি হয়, এবং এটি পরামর্শ দেওয়া হয় না যে, ক্লোনাজিপাম গ্রহণকারী মহিলারা স্তন্যদান করবেন।</div>
+<script>
+    function increaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+    }
+
+    function decreaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        if (quantityInput.value > 0) {
+            quantityInput.value = parseInt(quantityInput.value) - 1;
+        }
+    }
+</script>
+</body>
+</html>
+

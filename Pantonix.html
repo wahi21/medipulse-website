@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>প্যান্টোনিক্স ২০</title>
+<style>
+    .container {
+        display: flex;
+        align-items: flex-start;
+        padding: 40px;
+    }
+    .image-container {
+        margin-right: 10px;
+    }
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+    .napa, .paracetamol {
+        font-family: 'Verdana', sans-serif;
+        margin: 0;
+    }
+    .napa {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .paracetamol {
+        font-size: 18px;
+    }
+    .mg {
+        font-size: 16px;
+    }
+    .quantity-section {
+        margin-top: 15px;
+    }
+    .quantity-label {
+        font-family: 'Verdana', sans-serif;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .quantity-control {
+        display: flex;
+        align-items: center;
+    }
+    .quantity-button {
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .quantity-input {
+        width: 40px;
+        text-align: center;
+        margin: 0 10px;
+    }
+    .description-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }
+    .description-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    img {
+        width: 450px;
+        height: auto;
+        margin-bottom: 0;
+    }
+    .add-to-cart-btn {
+        background-color: #FFA07A;  /* Light orange background */
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;  /* Make the button span the width */
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    .add-to-cart-btn:hover {
+        background-color: #FF7F50;  /* Darker shade on hover */
+    }
+    .prescription-btn {
+        background-color: #FF6F00;  /* Orange color */
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    .price-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .best-price {
+        font-size: 24px;
+        font-weight: bold;
+        color: red;
+    }
+    .currency {
+        font-size: 20px;
+    }
+    .science-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }
+    .science-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }  
+    .management-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    } 
+    .management-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }   
+    .effects-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    } 
+    .effects-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    .caution-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    } 
+    .caution-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    } 
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="image-container">
+        <img src="C:/Users/USER/Downloads/Pantonix.jpg" alt="Napa Paracetamol">
+    </div>
+    <div class="text-container">
+        <p class="napa">প্যান্টোনিক্স ২০</p>
+        <p class="paracetamol">প্যানটোপ্রাজল ২০ মিগ্রা </p>
+
+        <div class="quantity-section">
+            <div>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="1" checked> ১ পিস
+                </label>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="10"> ১ পাতা=১৪ পিস
+                </label>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="10"> ১ বক্স=৭ পাতা
+                </label>
+            </div>
+
+            <div class="quantity-control">
+                <button class="quantity-button" onclick="decreaseQuantity()">-</button>
+                <input type="number" class="quantity-input" id="quantity" value="0" min="0" readonly>
+                <button class="quantity-button" onclick="increaseQuantity()">+</button>
+            </div>
+        </div>
+        
+        <!-- Price Section Above Add to Cart -->
+        <div class="price-section">
+            <span class="currency">৳</span>
+            <span class="best-price">৬.৭২</span>
+            <span>প্রতি পিস</span>
+        </div>
+        
+        <!-- Add to Cart Button -->
+        <button class="add-to-cart-btn">কার্টে যোগ করুন</button>
+        <button class="prescription-btn">প্রেসক্রিপশন প্রয়োজন</button>
+    </div>
+</div>
+
+<div class="description-container">
+    <div class="description-banner">বর্ণনা</div>
+    <div class="description-text">প্যানটোনিক্স ২০ মিগ্রা এমন পরিস্থিতিতে ব্যবহৃত হয় যেখানে অ্যাসিড স্রাব নিয়ন্ত্রণ করা চিকিৎসার জন্য উপকারী, যেমন:
+
+পেপটিক আলসার রোগ
+গ্যাস্ট্রোইসোফ্যাগিয়াল রিফ্লাক্স ডিজিজ (GERD)
+নন-স্টেরয়ডাল অ্যান্টি-ইনফ্ল্যামেটরি ড্রাগস (NSAIDs) দ্বারা সৃষ্ট আলসার
+হেলিকোব্যাক্টর পাইলোরি নির্মূলকরণ (অ্যান্টিবায়োটিকের সঙ্গে মিলিতভাবে)
+জোলিঙ্গার-এলিসন সিনড্রোম
+এই ওষুধটি অ্যাসিড উৎপাদন কমিয়ে এই ধরনের সমস্যাগুলোর চিকিৎসায় সাহায্য করে।</div>
+
+    <div class="science-banner">ঔষধবিজ্ঞান</div>
+    <div class="science-text">প্যানটোপ্রাজল একটি প্রোটন পাম্প ইনহিবিটার যা গ্যাস্ট্রিক প্যারাইটাল সেলের পৃষ্ঠে H+/K+ATPase এনজাইম সিস্টেমের সাথে কোভ্যালেন্টভাবে যুক্ত হয়, ফলে গ্যাস্ট্রিক অ্যাসিড উৎপাদনের চূড়ান্ত ধাপ দমন হয়। এই প্রভাবটি বেসাল এবং উদ্দীপ্ত পেটের অ্যাসিড স্রাব উভয়ই বাধা দেয়, এমনকি যদি উদ্দীপকটি ২৪ ঘণ্টারও বেশি সময় ধরে উপস্থিত থাকে।</div>
+   <div class="management-banner">ডোজ ও গ্রহণ</div>
+    <div class="management-text">**ওরাল ডোজ:**
+
+- **ভালিন গ্যাস্ট্রিক আলসার:** প্রতিদিন ৪০ মিগ্রা সকালে ৪ সপ্তাহের জন্য, যদি পুরোপুরি নিরাময় না হয় তবে আরও ৪ সপ্তাহ চালিয়ে যেতে হবে।
+- **গ্যাস্ট্রো-ইসোফ্যাগিয়াল রিফ্লাক্স ডিজিজ (GERD):** প্রতিদিন ২০-৪০ মিগ্রা সকালে ৪ সপ্তাহের জন্য, যদি পুরোপুরি নিরাময় না হয় তবে আরও ৪ সপ্তাহ চালিয়ে যেতে হবে; মেইনটেনেন্স ডোজ ২০ মিগ্রা প্রতিদিন, যা ৪০ মিগ্রা পর্যন্ত বাড়ানো যেতে পারে।
+- **ডুওডেনাল আলসার:** প্রতিদিন ৪০ মিগ্রা সকালে ২ সপ্তাহের জন্য, যদি পুরোপুরি নিরাময় না হয় তবে আরও ২ সপ্তাহ চালিয়ে যেতে হবে।
+- **হেলিকোব্যাক্টর পাইলোরি-সংশ্লিষ্ট ডুওডেনাল আলসার:** প্যানটোপ্রাজল ৪০ মিগ্রা দৈনিক দুটি ডোজে অ্যান্টিমাইক্রোবিয়াল এজেন্টগুলির সাথে মিলিয়ে ব্যবহার করা হয়, নিম্নরূপ:
+  - **অ্যামোক্সিসিলিন** ১ গ্রাম এবং **ক্ল্যারিথ্রোমাইসিন** ৫০০ মিগ্রা দু'বার দৈনিক এক সপ্তাহের জন্য, অথবা
+  - **ক্ল্যারিথ্রোমাইসিন** ২৫০ মিগ্রা এবং **মেট্রোনিডাজোল** ৪০০ মিগ্রা দু'বার দৈনিক এক সপ্তাহের জন্য।
+- **NSAID-সংক্রান্ত গ্যাস্ট্রিক বা ডুওডেনাল আলসারের প্রতিরোধ:** যারা দীর্ঘমেয়াদী NSAID চিকিত্সা নিচ্ছেন তাদের জন্য প্রতিদিন ২০ মিগ্রা।
+- **জোলিঙ্গার-এলিসন সিনড্রোম:** প্রাথমিকভাবে ৮০ মিগ্রা একবার দৈনিক, প্রতিক্রিয়া অনুসারে সমন্বয় করা হয় (বয়স্কদের জন্য সর্বাধিক ৪০ মিগ্রা দৈনিক); ৮০ মিগ্রা এর বেশি দৈনিক ডোজ দুটি বিভক্ত ডোজে দেওয়া হয়।
+
+**IV ইনজেকশন:**
+
+- **ডুওডেনাল আলসার এবং গ্যাস্ট্রিক আলসার:** ৭-১০ দিন ধরে প্রতিদিন ৪০ মিগ্রা একবার।
+- **গ্যাস্ট্রোইসোফ্যাগিয়াল রিফ্লাক্স ডিজিজ (GERD) যা এরোসিভ এসোফ্যাগাইটিসের ইতিহাস সহ:** ৭-১০ দিন ধরে প্রতিদিন ৪০ মিগ্রা একবার।
+- **পেপটিক আলসারে রিব্লিডিং প্রতিরোধ:** IV ৮০ মিগ্রা, তারপরে ৭২ ঘণ্টার জন্য ৮ মিগ্রা/ঘণ্টা ইনফিউশন।
+- **অ্যাসিড অ্যাসপিরেশন প্রতিরোধ:** ২৪ ঘণ্টার জন্য ১২ ঘণ্টা পর পর IV ৮০ মিগ্রা, তারপরে ১২ ঘণ্টা পর পর ৪০ মিগ্রা।
+- **জোলিঙ্গার-এলিসন সিনড্রোম এবং অন্যান্য প্যাথলজিক্যাল হাইপারসিক্রেটরি শর্তের দীর্ঘমেয়াদী ব্যবস্থাপনা:** ৮০ মিগ্রা IV প্রতিদিন ১২ ঘণ্টা পর পর, প্রয়োজনে ৮ ঘণ্টা পর পর ৮০ মিগ্রা বাড়ানো যেতে পারে, এবং অ্যাসিড আউটপুট অনুসারে উচ্চ ডোজে টাইট্রেট করা যেতে পারে।</div>
+   <div class="effects-banner">পার্শ্বপ্রতিক্রিয়া</div>
+    <div class="effects-text">নাপার পার্শ্বপ্রতিক্রিয়াগুলি সাধারণত মৃদু হয়, তবে হেমাটোলজিক প্রতিক্রিয়া যেমন থ্রম্বোসাইটোপেনিয়া, লিউকোপেনিয়া, প্যানসাইটোপেনিয়া, নিউট্রোপেনিয়া এবং অ্যাগ্রানুলোসাইটোসিস রিপোর্ট করা হয়েছে। প্যানক্রিয়াটাইটিস, ত্বকের র‌্যাশ, এবং অন্যান্য অ্যালার্জিক প্রতিক্রিয়া মাঝে মাঝে ঘটে।</div>
+    <div class="caution-banner">সতর্কতা</div>
+    <div class="caution-text">রোগীদের পরামর্শ দেওয়া উচিত যে তারা প্যানটোনিক্স ৪০ মিগ্রা/ভায়াল ট্যাবলেটটি ভেঙে, চিবিয়ে বা পিষে না খায়। প্যানটোনিক্স ৪০ মিগ্রা/ভায়াল দীর্ঘসময় ব্যবহারে সায়ানোকোবালামিন (ভিটামিন B12) এর শোষণে বিঘ্ন ঘটাতে পারে অথবা অস্টিওপোরোসিসের সাথে সম্পর্কিত সমস্যার ঝুঁকি বাড়াতে পারে। প্যানটোনিক্স ৪০ মিগ্রা/ভায়াল মার্কিন FDA দ্বারা B শ্রেণির গর্ভাবস্থা ওষুধ হিসেবে শ্রেণীবদ্ধ করা হয়েছে। তবে, গর্ভবতী মহিলাদের ওপর পর্যাপ্ত, নিয়ন্ত্রিত গবেষণা নেই। এই ওষুধটি গর্ভাবস্থায় শুধুমাত্র যদি পরিষ্কারভাবে প্রয়োজন হয় তখনই ব্যবহার করা উচিত, কারণ গর্ভধারণের ক্ষেত্রে প্রাণী পরীক্ষায় পাওয়া ফলাফল মানুষের প্রতি নির্দিষ্ট প্রতিক্রিয়া পূর্বানুমান করতে সহায়ক নয়। প্রমাণিত হয়েছে যে প্যানটোনিক্স ৪০ মিগ্রা/ভায়াল মানব স্তনে নিঃসৃত হয়। তাই স্তন্যদান বন্ধ করা বা এই ওষুধ বন্ধ করার বিষয়ে সিদ্ধান্ত নিতে হবে, যেটি মায়ের জন্য ওষুধের উপকারিতা বিবেচনায় রেখে।</div>
+<script>
+    function increaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+    }
+
+    function decreaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        if (quantityInput.value > 0) {
+            quantityInput.value = parseInt(quantityInput.value) - 1;
+        }
+    }
+</script>
+</body>
+</html>

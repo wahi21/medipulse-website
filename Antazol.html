@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>এন্টাজল ০.১%</title>
+<style>
+    .container {
+        display: flex;
+        align-items: flex-start;
+        padding: 40px;
+    }
+    .image-container {
+        margin-right: 10px;
+    }
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+    .napa, .paracetamol {
+        font-family: 'Verdana', sans-serif;
+        margin: 0;
+    }
+    .napa {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .paracetamol {
+        font-size: 18px;
+    }
+    .mg {
+        font-size: 16px;
+    }
+    .quantity-section {
+        margin-top: 15px;
+    }
+    .quantity-label {
+        font-family: 'Verdana', sans-serif;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .quantity-control {
+        display: flex;
+        align-items: center;
+    }
+    .quantity-button {
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .quantity-input {
+        width: 40px;
+        text-align: center;
+        margin: 0 10px;
+    }
+    .description-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }
+    .description-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    img {
+        width: 450px;
+        height: auto;
+        margin-bottom: 0;
+    }
+    .add-to-cart-btn {
+        background-color: #FFA07A;  /* Light orange background */
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;  /* Make the button span the width */
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    .add-to-cart-btn:hover {
+        background-color: #FF7F50;  /* Darker shade on hover */
+    }
+    .price-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .best-price {
+        font-size: 24px;
+        font-weight: bold;
+        color: red;
+    }
+    .currency {
+        font-size: 20px;
+    }
+    .science-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }
+    .science-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    .dose-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }   
+    .dose-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }  
+    .management-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    } 
+    .management-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }   
+    .effects-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    } 
+    .effects-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    .caution-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    } 
+    .caution-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    } 
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="image-container">
+        <img src="C:/Users/USER/Downloads/Antazol.jpg" alt="Napa Paracetamol">
+    </div>
+    <div class="text-container">
+        <p class="napa">এন্টাজল ০.১% ন্যাসাল ড্রপ</p>
+        <p class="paracetamol">জাইলোমেটাজোলিন ০.০৫%</p>
+
+
+        <div class="quantity-section">
+            <div>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="1" checked> ১ পিস
+                </label>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="10"> ১ বক্স=১২ পিস
+                </label>
+            </div>
+
+            <div class="quantity-control">
+                <button class="quantity-button" onclick="decreaseQuantity()">-</button>
+                <input type="number" class="quantity-input" id="quantity" value="0" min="0" readonly>
+                <button class="quantity-button" onclick="increaseQuantity()">+</button>
+            </div>
+        </div>
+        
+        <!-- Price Section Above Add to Cart -->
+        <div class="price-section">
+            <span class="currency">৳</span>
+            <span class="best-price">১৯.২০</span>
+            <span>প্রতি পিস</span>
+        </div>
+        
+        <!-- Add to Cart Button -->
+        <button class="add-to-cart-btn">কার্টে যোগ করুন</button>
+    </div>
+</div>
+
+<div class="description-container">
+    <div class="description-banner">বর্ণনা</div>
+    <div class="description-text">জাইলোমেটাজোলিন ব্যবহৃত হয়:
+
+সর্দি, রাইনাইটিস, সাইনুসাইটিস, এবং মাথাব্যথা নাকের অবরোধ সৃষ্টি করতে পারে।
+টিউবাল অবরোধ এবং সেরাস ওটিটিস মিডিয়া উভয়ই নাকের অবরোধের সাথে সম্পর্কিত।</div>
+</div>
+
+    <div class="science-banner">ঔষধবিজ্ঞান</div>
+    <div class="science-text">নাকের অবরোধ বিভিন্ন কারণের দ্বারা সৃষ্টি হয়, যেমন রাইনোসাইনুসাইটিস এবং অ্যালার্জিক বা নন-অ্যালার্জিক রাইনাইটিস, যা নাকের শ্লেষ্মা ঝিল্লীর সঙ্গে লাইন করা ভেনাস সিনুসোইডের অবরোধ সৃষ্টি করে। α-অ্যাড্রেনার্জিক রিসেপটরগুলির সক্রিয়করণ নাকের শ্লেষ্মা ঝিল্লীর রক্তনালীর সংকুচিত হওয়া এবং নাকের বাতাস প্রবাহের পুনরুদ্ধার ঘটায়। মানব নাকের শ্লেষ্মা ঝিল্লীতে সর্বাধিক প্রচুরভাবে প্রকাশিত α1A- এবং α2B-অ্যাড্রেনোরিসেপটরগুলি নাকের শ্লেষ্মা ঝিল্লীর রক্তনালীর সংকোচনে সবচেয়ে গুরুত্বপূর্ণ ভূমিকা পালন করতে পারে। জাইলোমেটাজোলিন একটি আরও নির্বাচনী আগনিস্ট α2B-অ্যাড্রেনোরিসেপটরে, α1A-, α2A-, α2C-, α1B-, এবং α1D-অ্যাড্রেনোরিসেপটরে এর অণুগততা রয়েছে। জাইলোমেটাজোলিন শ্বাস প্রশ্বাসের সময় নাকের প্রতিরোধ কমায় এবং নাকের বাতাস প্রবাহের আয়তন বৃদ্ধি করে। অক্সিমেটাজোলিনের তুলনায়, অন্য একটি ইমিডাজোলিন নাসাল ডিকংজেস্ট্যান্ট, জাইলোমেটাজোলিনের ক্রিয়া আরম্ভের গতি কিছুটা দ্রুত ছিল, যদিও তাদের কার্যকারিতার সময়কাল ছিল অনুরূপ। একটি গবেষণায়, নাকের অবরোধে আক্রান্ত বিষয়গুলি নাকের ডিকংজেস্ট্যান্সনের পাশাপাশি কানে ব্যথা এবং গলা ব্যথায় উপশম অনুভব করেছিলেন: এটি অনুমান করা হয় যে অক্সিমেটাজোলিন এই প্রভাবটি সৃষ্টির মাধ্যমে নাকের শ্লেষ্মা ঝিল্লীর রক্তনালীর সংকুচিত হওয়ার কারণে মাধ্যমে পরিচালনা করে, যা ভেনাস সাইনাস ধারণ করে, এবং নাকের ডিকংজেস্ট্যান্সন নাকে শ্বাস গ্রহণ করতে সক্ষম করে, যা মুখ দিয়ে শ্বাস নেওয়ার ফলে গলা শুকিয়ে যাওয়া এবং গলা ব্যথা থেকে উপশম প্রদান করে।</div>
+    <div class="dose-banner">ডোজ ও গ্রহণ</div>
+    <div class="dose-text">নাসাল ড্রপ-
+
+**প্রাপ্তবয়স্কদের জন্য**: ০.১%: প্রতিটি নস্যি-গহ্বরে ২ বা ৩টি ড্রপ, দিনে দুই থেকে তিনবার। ০.১% ১২ বছরের নিচে শিশুদের জন্য ব্যবহার করা উচিত নয়।
+
+**৬ থেকে ১২ বছর বয়সী শিশুদের জন্য**: ০.০৫%: প্রতিটি নস্যি-গহ্বরে ২ বা ৩টি ড্রপ, দিনে দুই বা তিনবার।
+
+**৬ বছরের নিচে শিশুদের জন্য**: ০.০৫%: প্রতিটি নস্যি-গহ্বরে ১টি ড্রপ, দিনে দুই বা তিনবার।
+
+**৩ মাসের কম বয়সী শিশুর জন্য**: ৩ মাসের কম বয়সী শিশুর জন্য ব্যবহৃত হবে না।
+
+নাসাল স্প্রে-
+
+**২-১২ বছর বয়সী শিশুদের জন্য**: ০.০৫%: প্রতিটি নস্যি-গহ্বরে ১ স্প্রে, দিনে তিনবারের বেশি নয়।
+
+**প্রাপ্তবয়স্ক এবং কিশোর-কিশোরীরা (১২ বছরের উপরে)**: ০.১%: প্রতিটি নস্যি-গহ্বরে ১ স্প্রে, প্রয়োজন অনুসারে দিনে ১ থেকে ৩ বার। প্রতিদিন প্রতি নস্যি-গহ্বরে ৩টি অ্যাপ্লিকেশন অতিক্রম করবেন না। অথবা, নিবন্ধিত চিকিৎসকের নির্দেশ অনুসারে।</div>
+   <div class="effects-banner">পার্শ্বপ্রতিক্রিয়া</div>
+    <div class="effects-text">নিম্নলিখিত পার্শ্বপ্রতিক্রিয়া কখনও কখনও দেখা গেছে:
+
+নাকে এবং গলায় জ্বালাপোড়া
+স্থানীয় চুলকানি বা জ্বালা
+বমি বমি ভাব এবং নাকের শ্লেষ্মা ঝিল্লীর শুষ্কতা</div>
+    <div class="caution-banner">সতর্কতা</div>
+    <div class="caution-text">এন্টাজোল নাসাল ড্রপস (০.১%) প্রাপ্তবয়স্কদের জন্য, ১২ বছরের নিচে শিশুদের জন্য ব্যবহৃত হবে না। দীর্ঘ সময় ধরে ড্রপস ব্যবহৃত হওয়া উচিত নয়, বিশেষ করে দীর্ঘস্থায়ী রাইনাইটিসের ক্ষেত্রে। ড্রপসের দীর্ঘস্থায়ী ব্যবহারে রিবাউন্ড কনজেশন এবং ড্রাগ-ইন্ডিউসড রাইনাইটিস সৃষ্টি হতে পারে। গর্ভাবস্থা শ্রেণী সি। জাইলোমেটাজোলিন গর্ভাবস্থায় ব্যবহৃত হবে না। স্তন্যদানকালে ওট্রিভিন ব্যবহারের জন্য শুধুমাত্র ডাক্তারের নির্দেশনায় করা উচিত।
+</div>
+<script>
+    function increaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+    }
+
+    function decreaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        if (quantityInput.value > 0) {
+            quantityInput.value = parseInt(quantityInput.value) - 1;
+        }
+    }
+</script>
+</body>
+</html>

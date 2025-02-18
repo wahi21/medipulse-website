@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>মোনাস ১০</title>
+<style>
+    .container {
+        display: flex;
+        align-items: flex-start;
+        padding: 40px;
+    }
+    .image-container {
+        margin-right: 10px;
+    }
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+    .napa, .paracetamol {
+        font-family: 'Verdana', sans-serif;
+        margin: 0;
+    }
+    .napa {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .paracetamol {
+        font-size: 18px;
+    }
+    .quantity-section {
+        margin-top: 15px;
+    }
+    .quantity-label {
+        font-family: 'Verdana', sans-serif;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .quantity-control {
+        display: flex;
+        align-items: center;
+    }
+    .quantity-button {
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .quantity-input {
+        width: 40px;
+        text-align: center;
+        margin: 0 10px;
+    } 
+    .price-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .best-price {
+        font-size: 24px;
+        font-weight: bold;
+        color: red;
+    }
+    .description-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }
+    .description-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    img {
+        width: 450px;
+        height: auto;
+        margin-bottom: 0;
+    }
+    .add-to-cart-btn {
+        background-color: #FFA07A;  /* Light orange background */
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;  /* Make the button span the width */
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    .add-to-cart-btn:hover {
+        background-color: #FF7F50;  /* Darker shade on hover */
+    }
+.prescription-btn {
+        background-color: #FF6F00;  /* Orange color */
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    .science-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }
+    .science-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    .dose-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }   
+    .dose-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }   
+    .effects-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    } 
+    .effects-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    .caution-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    } 
+    .caution-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    } 
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="image-container">
+        <img src="C:/Users/USER/Downloads/monas.jpg" alt="Napa Paracetamol">
+    </div>
+    <div class="text-container">
+        <p class="napa">মোনাস ১০ ট্যাবলেট</p>
+        <p class="paracetamol">মন্টেলুকাস্ট সোডিয়াম ১০ মি.গ্রা.</p>
+        
+        <div class="quantity-section">
+            <div>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="1" checked> ১ পিস
+                </label>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="10"> ১ পাতা=১৫ পিস
+                </label>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="20"> ১ বক্স=২ পাতা
+                </label>
+            </div>
+
+            <div class="quantity-control">
+                <button class="quantity-button" onclick="decreaseQuantity()">-</button>
+                <input type="number" class="quantity-input" id="quantity" value="0" min="0" readonly>
+                <button class="quantity-button" onclick="increaseQuantity()">+</button>
+            </div>
+        </div>
+        
+        <!-- Price Section Above Add to Cart -->
+        <div class="price-section">
+            <span class="currency">৳</span>
+            <span class="best-price">১৬.৮০</span>
+            <span>প্রতি পিস</span>
+        </div>
+        
+        <!-- Add to Cart Button -->
+        <button class="add-to-cart-btn">কার্টে যোগ করুন</button>
+        <button class="prescription-btn">প্রেসক্রিপশন প্রয়োজন</button>
+    </div>
+</div>
+
+<div class="description-container">
+    <div class="description-banner">বর্ণনা</div>
+    <div class="description-text">মনাস ১০ অ্যাস্থমার প্রতিরোধ এবং চিকিৎসার জন্য নির্ধারিত হয়।
+
+ব্যায়াম-প্ররোচিত ব্রঙ্কোকনস্ট্রিকশন: তীব্র প্রতিরোধ (EIB)
+অ্যালার্জিক রাইনাইটিস (AR) উপসর্গ উপশম: সিজনাল ও পারেনিয়াল অ্যালার্জিক রাইনাইটিস</div>
+
+<div class="science-banner">ঔষধবিজ্ঞান</div>
+<div class="science-text">অ্যারাচিডোনিক অ্যাসিড বিপাকের ফলে সাইস্টেইনাইল লিউকোট্রিন (LTC4, LTD4, এবং LTE4) উৎপন্ন হয় বিভিন্ন কোষ থেকে, যেমন মাস্ট সেল এবং ইওসিনোফিল। সাইস্টেইনাইল লিউকোট্রিন রিসেপ্টর (CysLT) মানব বায়ু পথের মধ্যে অবস্থান করে, এবং এই ইকোসানোয়েডগুলি তাদের সাথে যুক্ত হয়। মৌখিকভাবে সক্রিয় ঔষধ Monas 10 ১০ মি.গ্রা. CysLT1 রিসেপ্টরের জন্য শক্তিশালী আফিনিটি এবং নির্দিষ্টতা রাখে। কোন অ্যাগনিস্ট কার্যকলাপ ছাড়াই, এটি CysLT1 রিসেপ্টরে LTD4-এর শারীরিক প্রভাবগুলি প্রতিরোধ করে।</div>
+
+<div class="dose-banner">ডোজ ও গ্রহণ</div>
+<div class="dose-text">বয়সী ও কিশোরী রোগী যাদের অ্যাস্থমা বা মৌসুমী অ্যালার্জিক রাইনাইটিস আছে:
+
+প্রাপ্তবয়স্ক ও কিশোরী (১৫ বছর ও তার বেশি): Monas ১০ মিগ্রা ট্যাবলেট, দিনে একবার।
+পেডিয়াট্রিক রোগী (অ্যাস্থমা বা মৌসুমী অ্যালার্জিক রাইনাইটিস):
+
+৬ থেকে ১৪ বছর বয়সী শিশু: Monas ৫ মিগ্রা ট্যাবলেট, দিনে একবার।
+২ থেকে ৫ বছর বয়সী শিশু: Monas ৪ মিগ্রা ট্যাবলেট, দিনে একবার।
+৬ মাস থেকে ৫ বছর বয়সী শিশু: Monas ৪ মিগ্রা অরাল গ্রানুলস, দিনে একবার। এটি সরাসরি মুখে দেওয়া যেতে পারে অথবা ঠাণ্ডা পানি বা রুম টেম্পারেচারে থাকা নরম খাবারের সাথে মিশিয়ে দেওয়া যেতে পারে।
+পেডিয়াট্রিক রোগী ব্যবহারের জন্য: Monas-এর নিরাপত্তা এবং কার্যকারিতা ৬ মাস থেকে ১৪ বছর বয়সী শিশুদের মধ্যে অ্যাস্থমা নিয়ে পরিচালিত পর্যাপ্ত এবং সঠিকভাবে নিয়ন্ত্রিত গবেষণার মাধ্যমে প্রমাণিত হয়েছে। এই বয়সী গ্রুপে নিরাপত্তা ও কার্যকারিতার প্রোফাইল প্রাপ্তবয়স্কদের মতোই।
+
+যকৃতের অসুস্থতা: মৃদু থেকে মাঝারি যকৃতের অসুস্থতায় ডোজ পরিবর্তনের প্রয়োজন নেই।
+
+কিডনির অসুস্থতা: কিডনির অসুস্থতায় ডোজের কোনো পরিবর্তনের সুপারিশ করা হয় না।
+
+বৃদ্ধ বয়স্কদের জন্য ব্যবহারের নির্দেশিকা: Monas-এর ফার্মাকোকিনেটিক প্রোফাইল এবং ১০ মিগ্রা একক ডোজের মৌখিক বায়োঅ্যাভেইলেবিলিটি বৃদ্ধ বয়সীদের মধ্যে এবং তরুণ প্রাপ্তবয়স্কদের মধ্যে একই রকম। তবে, বৃদ্ধদের মধ্যে Monas-এর প্লা</div>
+
+<div class="effects-banner">পার্শ্বপ্রতিক্রিয়া</div>
+<div class="effects-text">সাধারণ: উপরের শ্বাসনালী সংক্রমণ, ডায়রিয়া, জ্বর, পেটের ব্যথা, মাথাব্যথা, বমি বমি ভাব, এবং বমি।
+
+অনাকাঙ্ক্ষিত লক্ষণসমূহ: একাথিসিয়া, উদ্বেগ, জয়েন্টে ব্যথা, ক্লান্তি, অস্বাভাবিক আচরণ, বিষণ্নতা, মাথা ঘোরা, নিদ্রাহীনতা, শুকনো মুখ, রক্তপাত, রেগে যাওয়া, অসুস্থ অনুভূতি, পেশীর সমস্যা, ফোলা, মৃগী, অদ্ভুত অনুভূতি, এবং ঘুমের সমস্যা।
+
+দুর্লভ: ফুসফুসে ইউসিনোফিলিয়া, অ্যাঞ্জিওএডেমা, মনোযোগের অভাব, বিভ্রান্তি, এরিথেমা নডোসাম, হ্যালুসিনেশন, যকৃতের সমস্যা, স্মৃতির ক্ষতি, palpitations (হৃদস্পন্দন), আত্মহত্যার চিন্তা, এবং কম্পন।</div>
+
+<div class="caution-banner">সতর্কতা</div>
+<div class="caution-text">অ্যাকিউট অ্যাস্থমা অ্যাটাক, যার মধ্যে স্টেটাস অ্যাস্থমেটিকাসও অন্তর্ভুক্ত, এ ক্ষেত্রে ব্রঙ্কোসপাজমের বিপরীত প্রতিক্রিয়া হিসেবে Monas ১০ মিগ্রা ব্যবহারের সুপারিশ করা হয় না। রোগীদের সঠিক রেসকিউ ওষুধের অ্যাক্সেস রাখার পরামর্শ দেওয়া উচিত। অ্যাকিউট অ্যাস্থমা এক্সাসারবেশনগুলি এখনো এই সমাধান দিয়ে চিকিৎসা করা যেতে পারে। ইনহেলড কোরটিকোস্টেরয়েডের ডোজ চিকিৎসক পরামর্শ অনুযায়ী ধীরে ধীরে কমানো যেতে পারে, তবে এই সমাধানটি ইনহেলড বা মৌখিক কোরটিকোস্টেরয়েডের পরিবর্তে হঠাৎ করে শুরু করা উচিত নয়। এক্সারসাইজ-ইন্ডিউসড ব্রঙ্কোসপাজম একক ডোজের মাধ্যমে চিকিৎসা করা উচিত নয়।
+
+এটি গ্রহণ করার সময়, যেসব রোগীর অ্যাসপিরিন প্রতি সংবেদনশীলতা রয়েছে, তাদের অ্যাসপিরিন বা নন-স্টেরয়ডাল অ্যান্টি-ইনফ্লামেটরি ড্রাগস (NSAIDs) গ্রহণ থেকে বিরত থাকতে হবে। যদিও অ্যাস্থমায় রোগীদের মধ্যে অ্যাসপিরিন প্রতি সংবেদনশীলতা একটি পরিচিত পার্শ্বপ্রতিক্রিয়া, তবে এটি অ্যাসপিরিন এবং অন্যান্য নন-স্টেরয়ডাল অ্যান্টি-ইনফ্লামেটরি ড্রাগস (NSAIDs)-এর প্রতি ব্রঙ্কোকনস্ট্রিক্টর প্রতিক্রিয়া সংক্ষিপ্ত করতে প্রমাণিত হয়নি।Monas ১০ মিগ্রা গর্ভাবস্থার শ্রেণী বি (Pregnancy Category B) হিসেবে শ্রেণীবদ্ধ। যদিও এটি প্রমাণিত হয়েছে যে, এই ওষুধটি গর্ভবতী ইঁদুর ও খরগোশের প্ল্যাসেন্টা পার হয়ে প্রবাহিত হয়, তবে গর্ভবতী মানুষের মধ্যে এর ব্যবহার সম্পর্কিত কোন রেকর্ড নেই। যদিও কিছু প্রমাণ রয়েছে যে এটি স্তন্যদুগ্ধে সেক্রেট হতে পারে, তবে এই আবিষ্কারটির পরিণতি সম্পর্কে খুব কম তথ্য পাওয়া গেছে। স্তন্যদানকারী মায়েদের মধ্যে চিকিৎসা শুরু করার আগে সতর্কতা অবলম্বন করা উচিত।</div>
+
+<script>
+    function increaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+    }
+
+    function decreaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        if (quantityInput.value > 0) {
+            quantityInput.value = parseInt(quantityInput.value) - 1;
+        }
+    }
+</script>
+</body>
+</html>

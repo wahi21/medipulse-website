@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>এন্টাসিড প্লাস ট্যাবলেট</title>
+<style>
+    .container {
+        display: flex;
+        align-items: flex-start;
+        padding: 40px;
+    }
+    .image-container {
+        margin-right: 10px;
+    }
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+    .napa, .paracetamol {
+        font-family: 'Verdana', sans-serif;
+        margin: 0;
+    }
+    .napa {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .paracetamol {
+        font-size: 18px;
+    }
+    .quantity-section {
+        margin-top: 15px;
+    }
+    .quantity-label {
+        font-family: 'Verdana', sans-serif;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .quantity-control {
+        display: flex;
+        align-items: center;
+    }
+    .quantity-button {
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .quantity-input {
+        width: 40px;
+        text-align: center;
+        margin: 0 10px;
+    } 
+    .price-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .best-price {
+        font-size: 24px;
+        font-weight: bold;
+        color: red;
+    }
+    .description-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }
+    .description-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    img {
+        width: 450px;
+        height: auto;
+        margin-bottom: 0;
+    }
+    .add-to-cart-btn {
+        background-color: #FFA07A;  /* Light orange background */
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;  /* Make the button span the width */
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    .add-to-cart-btn:hover {
+        background-color: #FF7F50;  /* Darker shade on hover */
+    }
+    .science-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }
+    .science-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    .dose-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }   
+    .dose-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }   
+    .effects-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    } 
+    .effects-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    .caution-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    } 
+    .caution-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    } 
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="image-container">
+        <img src="C:/Users/USER/Downloads/ENTACYD-PLUS.jpg" alt="Napa Paracetamol">
+    </div>
+    <div class="text-container">
+        <p class="napa">এন্টাসিড প্লাস ট্যাবলেট</p>
+        <p class="paracetamol">এন্টাসিড</p>
+        
+        <div class="quantity-section">
+            <div>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="1" checked> ১ পিস
+                </label>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="10"> ১ পাতা=১০ পিস
+                </label>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="20"> ১ বক্স=২০ পাতা
+                </label>
+            </div>
+
+            <div class="quantity-control">
+                <button class="quantity-button" onclick="decreaseQuantity()">-</button>
+                <input type="number" class="quantity-input" id="quantity" value="0" min="0" readonly>
+                <button class="quantity-button" onclick="increaseQuantity()">+</button>
+            </div>
+        </div>
+        
+        <!-- Price Section Above Add to Cart -->
+        <div class="price-section">
+            <span class="currency">৳</span>
+            <span class="best-price">২.৪০</span>
+            <span>প্রতি পিস</span>
+        </div>
+        
+        <!-- Add to Cart Button -->
+        <button class="add-to-cart-btn">কার্টে যোগ করুন</button>
+    </div>
+</div>
+
+<div class="description-container">
+    <div class="description-banner">বর্ণনা</div>
+    <div class="description-text">এটি পেপটিক আলসার, গ্যাস্ট্রাইটিস, পেপটিক ওএসোফ্যাগাইটিস, গ্যাস্ট্রিক হাইপারঅ্যাসিডিটি, হার্টবার্ন, খারাপ পেট বা হায়াটাস হার্নিয়া সংশ্লিষ্ট হাইপারঅ্যাসিডিটির লক্ষণজনিত উপশমের জন্য নির্দেশিত। এটি স্ট্রেস আলসারেশন এবং গ্যাস্ট্রোইনটেস্টিনাল (GI) রক্তক্ষরণ প্রতিরোধে কার্যকর। এটি একটি অ্যান্টিফ্লাটুলেন্ট হিসেবে কাজ করে যা গ্যাসের উপসর্গগুলি যেমন, অপারেশন পরবর্তী গ্যাস ব্যথা উপশমে সহায়ক। এটি দ্রুত অ্যাসিডের ব্যথা উপশম করে, গ্যাস্ট্রিক ফোম অপসারণ করে এবং গ্যাস এবং বাতাসের এরাক্টেশনকে সহজতর করে।</div>
+</div>
+
+<div class="science-banner">ঔষধবিজ্ঞান</div>
+<div class="science-text">এটি অ-সিস্টেমিক অ্যাসিড নিরপেক্ষকরণ উপাদান এবং অ্যান্টিফ্লাটুলেন্টের মিশ্রণ। এই প্রস্তুতি নির্ভরযোগ্যতা এবং দীর্ঘ কার্যকারিতা প্রদান করে। অ্যালুমিনিয়াম হাইড্রোক্সাইড এবং ম্যাগনেসিয়াম হাইড্রোক্সাইড পিপেটিক আলসারের উপশমে সহায়ক, কারণ এগুলি পেটের প্যারাইটাল কোষ থেকে সেক্রেট হওয়া গ্যাস্ট্রিক অ্যাসিড নিরপেক্ষকরণের মাধ্যমে আলসারের উপশম ঘটায়। সিমেথিকোনের ক্লিনিক্যাল ব্যবহার এর অ্যান্টিফোম বৈশিষ্ট্যের উপর ভিত্তি করে। সিমেথিকোন জলীয় তরলে তার পৃষ্ঠে ছড়িয়ে পড়ে, নিম্ন পৃষ্ঠতল টেনশন সহ একটি ফিল্ম গঠন করে এবং ফোম বুদবুদগুলির পতন ঘটায়। সিমেথিকোন পুনরায় গ্যাস্ট্রোইনটেস্টিনাল ট্র্যাক্টে আবদ্ধ মিউকাস পরিবেষ্টিত গ্যাস বুদবুদগুলিকে একত্রিত হতে এবং বেরিয়ে আসতে সহায়ক হয়। এটি ফ্ল্যাটুলেন্স এবং মেটিওরিজমের চিকিৎসায় গ্যাস, বাতাস বা ফোম অপসারণের জন্য ব্যবহৃত হয়, রেডিওগ্রাফির পূর্বে গ্যাস্ট্রোইনটেস্টিনাল ট্র্যাক্ট থেকে, এবং পেটের ফুলে যাওয়া এবং ডিসপেপসিয়া উপশমের জন্য। সিমেথিকোন শারীরবৃত্তীয়ভাবে নিষ্ক্রিয়; এটি গ্যাস্ট্রোইনটেস্টিনাল ট্র্যাক্ট থেকে শোষিত হওয়া প্রদর্শন করে না, যা গ্যাস্ট্রিক সিক্রেশন বা পুষ্টির শোষণের সাথে হস্তক্ষেপ করে না। মৌখিকভাবে ব্যবহারের পর, ঔষধটি অপরিবর্তিত অবস্থায় মলদ্বারের মাধ্যমে নির্গত হয়।</div>
+
+<div class="dose-banner">ডোজ ও গ্রহণ</div>
+<div class="dose-text">খাবারের ১-৩ ঘণ্টা পর এবং শোয়ার সময় ১-২টি ট্যাবলেট অথবা চিকিৎসকের নির্দেশনা অনুসারে।</div>
+
+<div class="effects-banner">পার্শ্বপ্রতিক্রিয়া</div>
+<div class="effects-text">পেটের অঙ্গসংস্থানকে প্রভাবিত করা পার্শ্বপ্রতিক্রিয়া সাধারণত কম ঘটে। অতিরিক্ত পরিমাণে গ্রহণ করলে ডায়রিয়া, কোষ্ঠকাঠিন্য বা রিগারজিটেশন ঘটতে পারে।</div>
+
+<div class="caution-banner">সতর্কতা</div>
+<div class="caution-text">কিডনির রোগে আক্রান্ত ব্যক্তিদের এটি সতর্কতার সাথে গ্রহণ করা উচিত। গর্ভাবস্থার প্রথম ত্রৈমাসিকে অ্যান্টাসিড প্রস্তুতিগুলি এড়ানো পরামর্শ দেওয়া হয়।</div>
+
+<script>
+    function increaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+    }
+
+    function decreaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        if (quantityInput.value > 0) {
+            quantityInput.value = parseInt(quantityInput.value) - 1;
+        }
+    }
+</script>
+</body>
+</html>
+
+

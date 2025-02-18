@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>জেলড্রিন ২০</title>
+<style>
+    .container {
+        display: flex;
+        align-items: flex-start;
+        padding: 40px;
+    }
+    .image-container {
+        margin-right: 10px;
+    }
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+    .napa, .paracetamol {
+        font-family: 'Verdana', sans-serif;
+        margin: 0;
+    }
+    .napa {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .paracetamol {
+        font-size: 18px;
+    }
+    .quantity-section {
+        margin-top: 15px;
+    }
+    .quantity-label {
+        font-family: 'Verdana', sans-serif;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .quantity-control {
+        display: flex;
+        align-items: center;
+    }
+    .quantity-button {
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .quantity-input {
+        width: 40px;
+        text-align: center;
+        margin: 0 10px;
+    }
+    .description-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }
+    .description-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    img {
+        width: 450px;
+        height: auto;
+        margin-bottom: 0;
+    }
+    .add-to-cart-btn {
+        background-color: #FFA07A;  /* Light orange background */
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;  /* Make the button span the width */
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    .add-to-cart-btn:hover {
+        background-color: #FF7F50;  /* Darker shade on hover */
+    }
+    .prescription-btn {
+        background-color: #FF6F00;  /* Orange color */
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    .price-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .best-price {
+        font-size: 24px;
+        font-weight: bold;
+        color: red;
+    }
+    .currency {
+        font-size: 20px;
+    }
+    .science-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }
+    .science-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    .dose-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }   
+    .dose-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }  
+    .effects-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    } 
+    .effects-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    .caution-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    } 
+    .caution-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    } 
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="image-container">
+        <img src="C:/Users/USER/Downloads/xeldrin.jpg" alt="Xeldrin 20">
+    </div>
+    <div class="text-container">
+        <p class="napa">জেলড্রিন ২০</p>
+        <p class="paracetamol">ওমিপ্রাজোল ২০ মিগ্রা</p>
+        
+        <!-- Quantity Selection Section -->
+        <div class="quantity-section">
+            <div>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="1" checked> ১ পিস
+                </label>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="10"> ১ পাতা=১০ পিস
+                </label>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="10"> ১ বক্স=১০ পাতা
+                </label>
+            </div>
+
+            <div class="quantity-control">
+                <button class="quantity-button" onclick="decreaseQuantity()">-</button>
+                <input type="number" class="quantity-input" id="quantity" value="0" min="0" readonly>
+                <button class="quantity-button" onclick="increaseQuantity()">+</button>
+            </div>
+        </div>
+        
+        <!-- Price Section Above Add to Cart -->
+        <div class="price-section">
+            <span class="currency">৳</span>
+            <span class="best-price">৫৩.২৮</span>
+            <span>প্রতি পিস</span>
+        </div>
+        
+        <!-- Add to Cart Button -->
+        <button class="add-to-cart-btn">কার্টে যোগ করুন</button>
+        <button class="prescription-btn">প্রেসক্রিপশন প্রয়োজন</button>
+    </div>
+</div>
+
+<div class="description-container">
+    <div class="description-banner">বর্ণনা</div>
+    <div class="description-text">ওমিপ্রাজোল নিম্নলিখিত অবস্থার চিকিৎসার জন্য ব্যবহৃত হয়:
+
+ডুওডেনাল এবং গ্যাস্ট্রিক আলসার
+এনএসএআইডি (NSAID) দ্বারা সৃষ্ট ডুওডেনাল এবং পাকস্থলীর আলসার
+এনএসএআইডি-সংক্রান্ত দু'র্‌ডেনাল এবং পাকস্থলীর আলসারের ইতিহাস রয়েছে এমন ব্যক্তিদের জন্য প্রতিরোধক ব্যবস্থা
+গ্যাস্ট্রোইসোফেজিয়াল রিফ্লাক্স ডিজিজ (GERD)
+দীর্ঘমেয়াদি অ্যাসিড রিফ্লাক্স ডিজিজ ব্যবস্থাপনা
+অ্যাসিড দ্বারা সৃষ্ট ডিসপেপসিয়া
+গুরুতর আলসারিং রিফ্লাক্সসহ এসোফ্যাগাইটিস
+সাধারণ অ্যানাস্থেসিয়া চলাকালে অ্যাসিড অ্যাসপিরেশন প্রতিরোধ
+জোলিঙ্গার-এলিসন সিনড্রোম, যেখানে বিষাক্ত পদার্থের বৃদ্ধি ঘটে
+হেলিকোব্যাক্টর পাইলোরি দ্বারা সৃষ্ট পেপটিক আলসার
+</div>
+
+    <div class="science-banner">ঔষধবিজ্ঞান</div>
+    <div class="science-text">ওমিপ্রাজোল, একটি প্রতিস্থাপিত বেনজিমিডাজোল, একটি পাকস্থলীর অ্যাসিড স্রাব রোধকারী। এটি পাকস্থলীর অ্যাসিড স্রাব কমিয়ে দেয় হাইড্রোজেন-পটাসিয়াম-অ্যাডেনোসিন ট্রাইফসফেটেজ (H+/K+ ATPase) এনজাইম সিস্টেমকে রোধ করে, যা পাকস্থলীর প্যারাইটাল সেলে থাকে। অ্যান্টিসেক্রেটরি কাজটি মৌখিক ব্যবহারের পর এক ঘন্টার মধ্যে শুরু হয়, সর্বাধিক প্রভাব দুটি ঘন্টার মধ্যে ঘটে এবং স্রাব দমন ৭২ ঘণ্টা পর্যন্ত স্থায়ী হয়। যখন ওষুধটি বন্ধ করা হয়, স্রাব কার্যকলাপ ধীরে ধীরে ৩ থেকে ৫ দিনের মধ্যে পুনরুদ্ধার হয়।</div>
+    <div class="dose-banner">ডোজ ও গ্রহণ</div>
+    <div class="dose-text">মৌখিক- বিনাইন গ্যাস্ট্রিক এবং ডুওডেনাল আলসার: ডুওডেনাল আলসারে ২০ মিগ্রা একবার দৈনিক ৪ সপ্তাহের জন্য, গ্যাস্ট্রিক আলসারে ৮ সপ্তাহ; গুরুতর বা পুনরাবৃত্ত ক্ষেত্রে, ডোজ ৪০ মিগ্রা দৈনিক বাড়ানো হবে; পুনরাবৃত্ত ডুওডেনাল আলসারের জন্য রক্ষণাবেক্ষণ ডোজ ২০ মিগ্রা একবার দৈনিক; ডুওডেনাল আলসারে পুনরাবৃত্তির প্রতিরোধে ১০-২০ মিগ্রা দৈনিক। এনএসএআইডি-সংক্রান্ত ডুওডেনাল বা গ্যাস্ট্রিক আলসার: ২০ মিগ্রা একবার দৈনিক ৪ সপ্তাহের জন্য, যদি পুরোপুরি সারানো না হয় তবে আরও ৪ সপ্তাহ চালিয়ে যান। ২০ মিগ্রা একবার দৈনিক হিসেবে এনএসএআইডি-সংক্রান্ত ডুওডেনাল বা গ্যাস্ট্রিক আলসারের ইতিহাস রয়েছে এমন রোগীদের জন্য প্রোফাইল্যাক্সিস হিসাবে ব্যবহৃত হয়। গ্যাস্ট্রো-ইসোফেজিয়াল রিফ্লাক্স ডিজিজ: ২০ মিগ্রা একবার দৈনিক ৪ সপ্তাহের জন্য, যদি পুরোপুরি সারানো না হয় তবে আরও ৪-৮ সপ্তাহ চালিয়ে যান; ৪০ মিগ্রা একবার দৈনিক ৮ সপ্তাহের জন্য গ্যাস্ট্রো-ইসোফেজিয়াল রিফ্লাক্স ডিজিজে, অন্য চিকিৎসার প্রতি প্রতিরোধী; রক্ষণাবেক্ষণ ডোজ ২০ মিগ্রা একবার দৈনিক। অ্যাসিড রিফ্লাক্স ডিজিজের দীর্ঘমেয়াদি ব্যবস্থাপনা: ১০-২০ মিগ্রা দৈনিক। অ্যাসিড-সম্পর্কিত ডিসপেপসিয়া: ১০-২০ মিগ্রা একবার দৈনিক ২-৪ সপ্তাহের জন্য। অ্যাসিড অ্যাসপিরেশন প্রতিরোধ: আগের সন্ধ্যায় ৪০ মিগ্রা, তারপর ৪০ মিগ্রা ২-৬ ঘণ্টা আগে সার্জারি। জোলিঙ্গার-এলিসন সিনড্রোম: প্রথমে ৬০ মিগ্রা একবার দৈনিক; সাধারণ পরিসর ২০-১২০ মিগ্রা দৈনিক (যদি দৈনিক ডোজ ৮০ মিগ্রার বেশি হয়, তাহলে ২টি ভাগে ডোজ নিতে হবে)। হেলিকোব্যাক্টর পাইলোরি নির্মূলের রেজিমেন পেপটিক আলসার রোগে: ওমিপ্রাজোল ২০ মিগ্রা দুইবার দৈনিক, নিম্নলিখিত অ্যান্টিমাইক্রোবিয়াল এজেন্টগুলির সাথে ব্যবহৃত হয়: অ্যামোক্সিসিলিন ৫০০ মিগ্রা এবং মেট্রোনিডাজোল ৪০০ মিগ্রা প্রতিদিন তিনবার এক সপ্তাহের জন্য, অথবা ক্ল্যারিথ্রোমাইসিন ২৫০ মিগ্রা এবং মেট্রোনিডাজোল ৪০০ মিগ্রা প্রতিদিন দুইবার এক সপ্তাহের জন্য, অথবা অ্যামোক্সিসিলিন ১ গ্রাম এবং ক্ল্যারিথ্রোমাইসিন ৫০০ মিগ্রা প্রতিদিন দুইবার এক সপ্তাহের জন্য। পেডিয়াট্রিক ব্যবহারের জন্য গুরুতর আলসারিং রিফ্লাক্স এসোফ্যাগাইটিস (শিশু>১ বছর): যদি শরীরের ওজন ১০-২০ কেজি হয়, ১০-২০ মিগ্রা একবার দৈনিক ৪-১২ সপ্তাহের জন্য; যদি শরীরের ওজন ২০ কেজির বেশি হয়, ২০-৪০ মিগ্রা একবার দৈনিক ৪-১২ সপ্তাহের জন্য। ইভি ইনজেকশন- অ্যাসিড অ্যাসপিরেশন প্রতিরোধ: ১ ঘণ্টা আগে ৪০ মিগ্রা ধীরে ধীরে (৫ মিনিটের মধ্যে) আইভি ইনজেকশন হিসেবে দিতে হবে। ডুওডেনাল আলসার, গ্যাস্ট্রিক আলসার বা রিফ্লাক্স এসোফ্যাগাইটিস: যেসব রোগীর ডুওডেনাল আলসার, গ্যাস্ট্রিক আলসার বা রিফ্লাক্স এসোফ্যাগাইটিস আছে এবং মৌখিক চিকিৎসা অপ্রয়োজনীয়, তাদের জন্য ৪০ মিগ্রা একবার দৈনিক আইভি ইনজেকশন সুপারিশ করা হয়। জোলিঙ্গার-এলিসন সিনড্রোম (ZES): জোলিঙ্গার-এলিসন সিনড্রোমে আক্রান্ত রোগীদের জন্য সুপারিশকৃত প্রাথমিক ডোজ ৬০ মিগ্রা দৈনিক। উচ্চতর দৈনিক ডোজ প্রয়োজন হতে পারে এবং ডোজটি ব্যক্তিগতভাবে সমন্বয় করা উচিত। যখন ডোজ ৬০ মিগ্রা দৈনিক ছাড়িয়ে যায়, তখন ডোজটি বিভক্ত করে দুইবার দৈনিক দিতে হবে। আইভি ইনজেকশন ব্যবহারের নির্দেশনা: ওমিপ্রাজোল লাইফিলাইজড পাউডার এবং ইনজেকশনের জন্য জল শুধুমাত্র ইনট্রাভেনাস ব্যবহারের জন্য এবং অন্য কোনও রুটে দেওয়া উচিত নয়। ওমেপ্রাজোল আইভি ইনজেকশন ধীরে ধীরে (অন্তত ২ থেকে ৫ মিনিটে) দেওয়া উচিত। ইনজেকশনের জন্য দ্রবণ তৈরি করার জন্য ১০ মিলিলিটার জল ইনজেকশনের বোতলে পাউডারের সাথে মেশাতে হবে। পুনর্গঠন করার পরে ইনজেকশন ধীরে ধীরে ২ থেকে ৫ মিনিটের মধ্যে দেওয়া উচিত, সর্বাধিক গতিতে ৪ মিলিলিটার/মিনিট। শুধুমাত্র তাজা দ্রবণ ব্যবহার করুন। দ্রবণটি পুনর্গঠনের ৪ ঘণ্টার মধ্যে ব্যবহার করতে হবে। আইভি ইনফিউশন ব্যবহারের নির্দেশনা: ওমিপ্রাজোল আইভি ইনফিউশন ২০-৩০ মিনিট বা তার বেশি সময় ধরে ইনট্রাভেনাস ইনফিউশন হিসাবে দেওয়া উচিত। এক বোতলের বিষয়বস্তু ১০০ মিলিলিটার স্যালাইন অথবা ১০০ মিলিলিটার ৫% ডেক্সট্রোজ সলিউশন এর সাথে মিশিয়ে ইনফিউশন করতে হবে। দ্রবণটি স্যালাইনে পুনর্গঠিত হলে ১২ ঘণ্টার মধ্যে এবং ৫% ডেক্সট্রোজে পুনর্গঠিত হলে ৬ ঘণ্টার মধ্যে ব্যবহার করতে হবে। পুনর্গঠিত দ্রবণটি অন্য কোনও ঔষধের সাথে মিশিয়ে বা একই ইনফিউশন সেটে একসাথে দেওয়া উচিত নয়।</div>
+   <div class="effects-banner">পার্শ্বপ্রতিক্রিয়া</div>
+    <div class="effects-text">ওমিপ্রাজোল বেশিরভাগ মানুষের মধ্যে ভালোভাবে সহ্য হয়। বমি, পাকস্থলীর গ্যাস, পেরেস্টেশিয়া, মাথা ঘোরা, এবং মাথাব্যথা সকলেই ছোট এবং সাময়িক রিপোর্ট করা হয়েছে, যাদের জন্য ডোজ কমানোর প্রয়োজন হয় না।</div>
+    <div class="caution-banner">সতর্কতা</div>
+    <div class="caution-text">যখন পাকস্থলীর আলসার সন্দেহ করা হয়, তখন ওমিপ্রাজোল চিকিৎসা শুরু করার আগে গ্যাস্ট্রিক ক্যান্সারের সম্ভাবনা বাদ দেওয়া উচিত, কারণ এটি লক্ষণগুলি উপশম করতে পারে, যা সনাক্তকরণে বিলম্ব ঘটাতে পারে। ওমিপ্রাজোলকে ইউএস ফুড অ্যান্ড ড্রাগ অ্যাডমিনিস্ট্রেশন দ্বারা গর্ভাবস্থা ক্যাটেগরি সি হিসেবে শ্রেণিবদ্ধ করা হয়েছে। তবে, তিনটি prospective মহামারী বিদ্যা গবেষণার ফলাফলগুলি দেখায় যে ওমিপ্রাজোল গর্ভাবস্থা বা ভ্রূণ/নবজাতক শিশুর স্বাস্থ্যতে কোনো নেতিবাচক প্রভাব ফেলেনি। ওমিপ্রাজোলের স্তন্যদানে প্রবাহ বা নবজাতকের উপর এর প্রভাব সম্পর্কে কোনো তথ্য নেই। যদি ওমিপ্রাজোল ব্যবহারের প্রয়োজনীয়তা দেখা যায়, তবে স্তন্যদান বন্ধ করা উচিত।</div>
+<script>
+    function increaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+    }
+
+    function decreaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        if (quantityInput.value > 0) {
+            quantityInput.value = parseInt(quantityInput.value) - 1;
+        }
+    }
+</script>
+</body>
+</html>

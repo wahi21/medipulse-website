@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>নাপা</title>
+<style>
+    .container {
+        display: flex;
+        align-items: flex-start;
+        padding: 40px;
+    }
+    .image-container {
+        margin-right: 10px;
+    }
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+    .napa, .paracetamol, .mg {
+        font-family: 'Verdana', sans-serif;
+        margin: 0;
+    }
+    .napa {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .paracetamol {
+        font-size: 18px;
+    }
+    .mg {
+        font-size: 16px;
+    }
+    .quantity-section {
+        margin-top: 15px;
+    }
+    .quantity-label {
+        font-family: 'Verdana', sans-serif;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .quantity-control {
+        display: flex;
+        align-items: center;
+    }
+    .quantity-button {
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .quantity-input {
+        width: 40px;
+        text-align: center;
+        margin: 0 10px;
+    }
+    .description-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }
+    .description-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    img {
+        width: 450px;
+        height: auto;
+        margin-bottom: 0;
+    }
+    .add-to-cart-btn {
+        background-color: #FFA07A;  /* Light orange background */
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;  /* Make the button span the width */
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    .add-to-cart-btn:hover {
+        background-color: #FF7F50;  /* Darker shade on hover */
+    }
+    .prescription-btn {
+        background-color: #FF6F00;  /* Orange color */
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    .price-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .best-price {
+        font-size: 24px;
+        font-weight: bold;
+        color: red;
+    }
+    .currency {
+        font-size: 20px;
+    }
+    .science-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }
+    .science-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    .dose-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }   
+    .dose-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }  
+    .management-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    } 
+    .management-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }   
+    .effects-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    } 
+    .effects-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    .caution-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    } 
+    .caution-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    } 
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="image-container">
+        <img src="C:/Users/USER/Downloads/napa.jpg" alt="Napa Paracetamol">
+    </div>
+    <div class="text-container">
+        <p class="napa">নাপা</p>
+        <p class="paracetamol">প্যারাসিটামল</p>
+        <p class="mg">৫০০ মি.গ্রা.</p>
+        
+        <!-- Quantity Selection Section -->
+        <div class="quantity-section">
+            <div>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="1" checked> ১ পিস
+                </label>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="10"> ১ পাতা=১০ পিস
+                </label>
+            </div>
+
+            <div class="quantity-control">
+                <button class="quantity-button" onclick="decreaseQuantity()">-</button>
+                <input type="number" class="quantity-input" id="quantity" value="0" min="0" readonly>
+                <button class="quantity-button" onclick="increaseQuantity()">+</button>
+            </div>
+        </div>
+        
+        <!-- Price Section Above Add to Cart -->
+        <div class="price-section">
+            <span class="currency">৳</span>
+            <span class="best-price">১.১৫</span>
+            <span>প্রতি পিস</span>
+        </div>
+        
+        <!-- Add to Cart Button -->
+        <button class="add-to-cart-btn">কার্টে যোগ করুন</button>
+        <button class="prescription-btn">প্রেসক্রিপশন প্রয়োজন</button>
+    </div>
+</div>
+
+<div class="description-container">
+    <div class="description-banner">বর্ণনা</div>
+    <div class="description-text">নাপা জ্বর, সাধারণ সর্দি এবং ইনফ্লুয়েঞ্জা, মাথাব্যথা, দাঁতে ব্যথা, কানে ব্যথা, শরীরে ব্যথা, মাংসপেশির ব্যথা, স্নায়ুবিক ব্যথা, ঋতুস্রাবের ব্যথা, মোচ ও পেটে ব্যথা, পিঠে ব্যথা, অপারেশনের পরের ব্যথা, প্রসবের পরের ব্যথা, প্রদাহজনিত ব্যথা এবং শিশুদের টিকাদানের পরের ব্যথা নিরাময়ের জন্য নির্দেশিত। এটি আর্থ্রাইটিস ও অস্টিওআর্থ্রাইটিসের ব্যথা এবং জয়েন্টের স্টিফনেসের জন্যও নির্দেশিত।</div>
+</div>
+
+    <div class="science-banner">ঔষধবিজ্ঞান</div>
+    <div class="science-text">প্যারাসিটামল আন্ত্রিক ব্যথার উত্তেজনা সৃষ্টির জন্য পারিপার্শ্বিক ব্লকেজের মাধ্যমে ব্যথানাশক কার্যকারিতা প্রদর্শন করে। এটি হাইপোথ্যালামিক তাপ-নিয়ন্ত্রণ কেন্দ্রের ওপর প্রভাব ফেলিয়ে তাপমাত্রা নিয়ন্ত্রণে অ্যান্টিপাইরেটিক প্রভাব সৃষ্টি করে। এর দুর্বল প্রদাহ বিরোধী কার্যকলাপ সিএনএস-এ প্রস্টাগ্ল্যান্ডিন সংশ্লেষণের প্রতিবন্ধকতার সাথে সম্পর্কিত।
+
+প্যারাসিটামল (অ্যাসিটামিনোফেন) সিএনএস-এ প্রধানত কাজ করে বলে মনে করা হয়, এটি COX-1, COX-2 এবং COX-3 এনজাইমের উভয় প্রকারকে প্রতিরোধ করে প্রস্টাগ্ল্যান্ডিন (PG) সংশ্লেষণের মাধ্যমে ব্যথার সীমা বৃদ্ধি করে। NSAIDs-এর তুলনায়, অ্যাসিটামিনোফেন পেরিফেরাল টিস্যুগুলিতে সাইক্লোঅক্সিজিনেসে (COX) প্রতিরোধ করে না এবং সেজন্য এর কোনও পেরিফেরাল প্রদাহ বিরোধী প্রভাব নেই। যেখানে অ্যাসপিরিন COX-এ এনজাইমের সক্রিয় স্থানে সরাসরি ব্লক করে একটি অপরিবর্তনীয় ইনহিবিটর হিসেবে কাজ করে, সেখানে গবেষণায় দেখা গেছে যে অ্যাসিটামিনোফেন COX-এ ইনডাইরেক্টলি ব্লক করে এবং এই ব্লকেডটি পেরক্সাইডের উপস্থিতিতে অকার্যকর হয়ে যায়। এটি ব্যাখ্যা করতে পারে কেন অ্যাসিটামিনোফেন সেন্ট্রাল নার্ভাস সিস্টেমে এবং এন্ডোথেলিয়াল কোষে কার্যকরী, কিন্তু প্লেটলেট এবং ইমিউন কোষে যা পেরক্সাইডের উচ্চ স্তর ধারণ করে, সেখানে এটি কার্যকর নয়। গবেষণায় এমন তথ্য পাওয়া গেছে যা দাবি করে যে অ্যাসিটামিনোফেন COX-এ ইনজাইমের একটি ভ্যারিয়েন্টকে নির্বাচনীভাবে ব্লক করে, যা পরিচিত COX-1 এবং COX-2 ভ্যারিয়েন্ট থেকে আলাদা। এই এনজাইমটি এখন COX-3 হিসেবে পরিচিত। এর সঠিক কর্মপদ্ধতি এখনও ভালভাবে বোঝা যায়নি, তবে ভবিষ্যতে গবেষণা এর কার্যপদ্ধতি সম্পর্কে আরও তথ্য সরবরাহ করতে পারে। অ্যাসিটামিনোফেনের অ্যান্টিপাইরেটিক বৈশিষ্ট্যগুলি সম্ভবত হাইপোথ্যালামাসের তাপ-নিয়ন্ত্রণ কেন্দ্রে সরাসরি প্রভাবের ফলে পারিপার্শ্বিক রক্তবাহী প্রসারণ, ঘাম এবং এর ফলে তাপমাত্রা কমানোর সাথে সম্পর্কিত।</div>
+    <div class="dose-banner">ডোজ</div>
+    <div class="dose-text">প্রাপ্তবয়স্ক: প্রতি ৪ থেকে ৬ ঘণ্টা পর ১-২টি ট্যাবলেট, সর্বাধিক ৪ গ্রাম (৮টি ট্যাবলেট) দৈনিক।
+শিশু (৬-১২ বছর): প্রতি দিন ৩ থেকে ৪ বার ½ থেকে ১টি ট্যাবলেট। দীর্ঘমেয়াদী চিকিৎসার জন্য, ২.৬ গ্রাম/দিনের বেশি ডোজ না নেওয়া উচিত।</div>
+   <div class="management-banner">গ্রহণ</div>
+    <div class="management-text">খাবারের সঙ্গে বা ছাড়া নেওয়া যেতে পারে।</div>
+   <div class="effects-banner">পার্শ্বপ্রতিক্রিয়া</div>
+    <div class="effects-text">নাপার পার্শ্বপ্রতিক্রিয়াগুলি সাধারণত মৃদু হয়, তবে হেমাটোলজিক প্রতিক্রিয়া যেমন থ্রম্বোসাইটোপেনিয়া, লিউকোপেনিয়া, প্যানসাইটোপেনিয়া, নিউট্রোপেনিয়া এবং অ্যাগ্রানুলোসাইটোসিস রিপোর্ট করা হয়েছে। প্যানক্রিয়াটাইটিস, ত্বকের র‌্যাশ, এবং অন্যান্য অ্যালার্জিক প্রতিক্রিয়া মাঝে মাঝে ঘটে।</div>
+    <div class="caution-banner">সতর্কতা</div>
+    <div class="caution-text">নাপা যেসব রোগীর কিডনি বা যকৃৎ কার্যক্ষমতা কম, তাদের জন্য সতর্কতার সাথে দেওয়া উচিত। যেসব রোগী অন্য কোনও ঔষধ গ্রহণ করছেন যা যকৃতে প্রভাব ফেলতে পারে, তাদের ক্ষেত্রে নাপা সতর্কতার সাথে দেওয়া উচিত। ইউএসএফডিএ অনুযায়ী এটি গর্ভাবস্থার ক্যাটেগরি বি। এই ঔষধটি গর্ভাবস্থায় কেবলমাত্র প্রয়োজন হলে ব্যবহার করা উচিত।</div>
+<script>
+    function increaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+    }
+
+    function decreaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        if (quantityInput.value > 0) {
+            quantityInput.value = parseInt(quantityInput.value) - 1;
+        }
+    }
+</script>
+</body>
+</html>
+

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<title>অ্যালজিন</title>
+<style>
+    .container {
+        display: flex;
+        align-items: flex-start;
+        padding: 40px;
+    }
+    .image-container {
+        margin-right: 10px;
+    }
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+    .napa, .paracetamol, .mg {
+        font-family: 'Verdana', sans-serif;
+        margin: 0;
+    }
+    .napa {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .paracetamol {
+        font-size: 18px;
+    }
+    .quantity-section {
+        margin-top: 15px;
+    }
+    .quantity-label {
+        font-family: 'Verdana', sans-serif;
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    .quantity-control {
+        display: flex;
+        align-items: center;
+    }
+    .quantity-button {
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .quantity-input {
+        width: 40px;
+        text-align: center;
+        margin: 0 10px;
+    }
+    .description-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }
+    .description-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    img {
+        width: 450px;
+        height: auto;
+        margin-bottom: 0;
+    }
+    .add-to-cart-btn {
+        background-color: #FFA07A;  /* Light orange background */
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;  /* Make the button span the width */
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    .add-to-cart-btn:hover {
+        background-color: #FF7F50;  /* Darker shade on hover */
+    }
+    .prescription-btn {
+        background-color: #FF6F00;  /* Orange color */
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 5px;
+    }
+    .price-section {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .best-price {
+        font-size: 24px;
+        font-weight: bold;
+        color: red;
+    }
+    .currency {
+        font-size: 20px;
+    }
+    .science-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }
+    .science-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    .dose-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    }   
+    .dose-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }   
+    .effects-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    } 
+    .effects-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    }
+    .caution-banner {
+        background-color: #b2d5ed;
+        color: #000;
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        padding: 5px 10px;
+        width: 100px;
+        margin-top: 10px;
+    } 
+    .caution-text {
+        font-family: 'Verdana', sans-serif;
+        font-size: 15px;
+        text-align: justify;
+        padding: 5px 10px;
+        margin-top: 5px;
+        word-wrap: break-word;
+    } 
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="image-container">
+        <img src="C:/Users/USER/Downloads/algin.jpg" alt="Algin">
+    </div>
+    <div class="text-container">
+        <p class="napa">অ্যালজিন ট্যাবলেট</p>
+        <p class="paracetamol">টায়মোনিয়াম মিথাইলসালফেট ৫০মিগ্রা</p>
+
+        
+        <!-- Quantity Selection Section -->
+        <div class="quantity-section">
+            <div>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="1" checked> ১ পিস
+                </label>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="10"> ১ পাতা=১০ পিস
+                </label>
+                <label class="quantity-label">
+                    <input type="radio" name="quantity" value="10"> ১ বক্স=১০ পাতা
+                </label>
+            </div>
+
+            <div class="quantity-control">
+                <button class="quantity-button" onclick="decreaseQuantity()">-</button>
+                <input type="number" class="quantity-input" id="quantity" value="0" min="0" readonly>
+                <button class="quantity-button" onclick="increaseQuantity()">+</button>
+            </div>
+        </div>
+        
+        <!-- Price Section Above Add to Cart -->
+        <div class="price-section">
+            <span class="currency">৳</span>
+            <span class="best-price">৮.১৬</span>
+            <span>প্রতি পিস</span>
+        </div>
+        
+        <!-- Add to Cart Button -->
+        <button class="add-to-cart-btn">কার্টে যোগ করুন</button>
+        <button class="prescription-btn">প্রেসক্রিপশন প্রয়োজন</button>
+    </div>
+</div>
+
+<div class="description-container">
+    <div class="description-banner">বর্ণনা</div>
+    <div class="description-text">অ্যালজিন একটি অ্যান্টিস্প্যাজমোডিক সেডেট যা পাচনতন্ত্র, পিত্তনালি, মূত্রাশয় এবং গর্ভাশয়ের পেশী সংকোচন কমাতে সহায়ক। এটি পাচনতন্ত্র এবং পিত্তনালীর কার্যকরী অস্বস্তির সাথে সম্পর্কিত ব্যথার উপসর্গগত চিকিৎসায় ব্যবহৃত হয়। এটি ইউরোলজিক্যাল এবং স্ত্রীরোগজনিত রোগে সংকোচন এবং ব্যথার চিকিৎসার জন্যও প্রস্তাবিত।</div>
+</div>
+
+    <div class="science-banner">ঔষধবিজ্ঞান</div>
+    <div class="science-text">অ্যাসিটাইলকোলিন, হিস্টামিন এবং টাইমোনিয়াম মিথাইলসালফেট হল প্রতিযোগিতামূলক অ্যান্টাগনিস্ট, এবং টাইমোনিয়াম মিথাইলসালফেট ঝিল্লির ফসফোলিপিড এবং প্রোটিনের সাথে ক্যালসিয়ামের সংযোগ বাড়ায়। এর ফলস্বরূপ, অন্তঃকোষীয় সঙ্কোচনশীল প্রোটিনগুলির কার্যকলাপ দমন হয়, যার ফলে অন্তঃকোষীয় স্পাজম এবং ব্যথা কমে যায়।</div>
+    <div class="dose-banner">ডোজ ও গ্রহণ</div>
+    <div class="dose-text">ট্যাবলেট/সিরাপ-
+
+বয়স্ক: সাধারণ ডোজ হলো দৈনিক ২-৬টি ট্যাবলেট বা ৩-৯ চামচ সিরাপ ভাগ করে নেওয়া।
+
+শিশু: ৩ মি.লি./কেজি বা ৬ মি.গ্রা./কেজি শরীরের ওজন অনুযায়ী দৈনিক ভাগ করে নেওয়া।
+
+ইনজেকশন: ১টি টাইমোনিয়াম মিথাইলসালফেট ইনজেকশন দৈনিক ৩ বার, ধীরে ধীরে ইন্ট্রাভেনাস রুটে অথবা ইন্ট্রামাসকুলার রুটে প্রয়োগ করতে হবে।
+
+সাপোজিটরি: ২০ মি.গ্রা. টাইমোনিয়াম মিথাইলসালফেট সাপোজিটরি দৈনিক দুই বা তিন বার, রেকটাল রুটে প্রয়োগ করতে হবে।</div>
+
+   <div class="effects-banner">পার্শ্বপ্রতিক্রিয়া</div>
+    <div class="effects-text">ব্যক্তিতে নিম্ন রক্তচাপ এবং ত্বকহার্দতা হতে পারে।</div>
+    <div class="caution-banner">সতর্কতা</div>
+    <div class="caution-text">অ্যালজিনের প্রাণী পরীক্ষার ফলাফলগুলি কোনো টেরাটোজেনিক প্রভাব প্রকাশ করেনি; স্বাভাবিক ব্যবহারে এখন পর্যন্ত কোনো বিকৃতির রিপোর্ট করা হয়নি। পর্যাপ্ত তথ্যের অভাবে, গর্ভবতী মহিলাদের সতর্কতা অবলম্বন করা উচিত, যদিও সাধারণ ব্যবহারে কোনো সমস্যা রিপোর্ট করা হয়নি।</div>
+<script>
+    function increaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+    }
+
+    function decreaseQuantity() {
+        var quantityInput = document.getElementById('quantity');
+        if (quantityInput.value > 0) {
+            quantityInput.value = parseInt(quantityInput.value) - 1;
+        }
+    }
+</script>
+</body>
+</html>
